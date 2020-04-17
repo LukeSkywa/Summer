@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MyHttpService } from 'src/app/services/myhttp.service';
 
 
 @Component({
@@ -7,9 +8,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./lista.component.scss']
 })
 export class ListaComponent implements OnInit {
-  lista=[
-    {id:1,nome:"prova"}
-  ];
+  lista=[];
   constructor(private myHttpService: MyHttpService) { }
 
   ngOnInit(): void {
