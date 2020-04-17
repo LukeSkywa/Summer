@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MyHttpService } from 'src/app/services/myhttp.service';
 
 @Component({
   selector: 'app-lista',
