@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+//import { ListaComponent } from './lista/lista/lista.component';
 import { LoginComponent } from './components/login/login.component';
 import { EditGuardService } from './services/guards/edit-guard.service';
 import { GuardService } from './services/guards/guard.service';
@@ -12,7 +13,7 @@ const routes: Routes = [
   // { path: 'home', component: HomeComponent },
   // { path: 'funzionalita', component: FunzionalitaComponent, canActivate: [GuardService]},
  //  { path: 'crealista', component: CrealistaComponent, canActivate: [MyRouteGuardService]},
- //  { path: 'lista', component: ListaComponent, canActivate: [MyRouteGuardService]},
+    // { path: 'lista', component: ListaComponent},
  //  { path: 'dettaglio/:id', component: DettaglioComponent, canActivate: [MyRouteGuardService]},
       { path: 'registrati', component:RegistrazioneComponent, canActivate: [EditGuardService]},
       { path: '', redirectTo: '/login', pathMatch: 'full' },
