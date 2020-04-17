@@ -9,7 +9,8 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HomeComponent } from './home/home.component';
 import { MenuComponent } from './menu/menu.component';
 import { HttpClientModule } from '@angular/common/http';
-import { MyHttpService } from './services/myhttp.service';
+import { ListaComponent } from './lista/lista/lista.component';
+
 
 @NgModule({
   declarations: [
@@ -18,14 +19,16 @@ import { MyHttpService } from './services/myhttp.service';
     RegistrazioneComponent,
     HomeComponent,
     MenuComponent,
-    MyHttpService
+    ListaComponent
+   
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

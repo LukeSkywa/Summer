@@ -32,6 +32,7 @@ export class ListaComponent implements OnInit {
 
   }
   ngOnInit(): void {
+    this.riempi();
   }
 
 }
