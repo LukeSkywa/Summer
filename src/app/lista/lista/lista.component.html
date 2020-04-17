@@ -1,4 +1,14 @@
+<select #filtro>
+    <option value="all">Tutto</option>
+    <option value="pref">preferiti</option>
+    <option value="nasc">nascosti</option>
+</select>
+
+<button (click)="filtra(filtro.value)">Filtra</button>
+
 <ul>
-    <li *ngFor="let item of lista">{{item.nome}}</li>
- 
+    <div  *ngFor="let item of lista">
+        <li>{{item.nome}}</li>
+        <p>{{item.autore}}, {{item.Rating}}</p>
+    </div>
 </ul>
