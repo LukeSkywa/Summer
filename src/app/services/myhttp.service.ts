@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { ListItem } from '../models/ListItem';
 
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -13,6 +14,7 @@ export class MyHttpService {
 
   getGames(): Observable<any>{
     return this.httpClient.get('http://localhost:3000/giochi');
+    
   }
 
 }
