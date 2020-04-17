@@ -1,4 +1,7 @@
-<form [formGroup]="loginForm" (ngSubmit)="login();" >
+<div>
+    <img src="logo.jpg">
+    <p>Accedi</p>
+    <form [formGroup]="loginForm" (ngSubmit)="login();" >
     <div class="form-group">
         <label for="username">Nome utente</label>
         <input type="text" id="username" formControlName="username" >
@@ -9,3 +12,4 @@
     </div>
     <button type="submit" id="btnSub">Login</button>
 </form>
+</div>
