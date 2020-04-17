@@ -14,7 +14,7 @@ const routes: Routes = [
  //  { path: 'crealista', component: CrealistaComponent, canActivate: [MyRouteGuardService]},
     // { path: 'lista', component: ListaComponent},
  //  { path: 'dettaglio/:id', component: DettaglioComponent, canActivate: [MyRouteGuardService]},
-      { path: 'registrati', component:RegistrazioneComponent, canActivate: [EditGuardService]},
+      { path: 'registrati', component: RegistrazioneComponent, canActivate: [EditGuardService]},
       { path: '', redirectTo: '/login', pathMatch: 'full' },
  //  { path: '**', component: PageNotFoundComponent }
 ];
