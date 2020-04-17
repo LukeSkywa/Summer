@@ -2,7 +2,7 @@
 <div>
     <img src="logo.jpg" alt="logo">
     <br>
-    <button type="button">x</button>
+    <button type="button" routerLinkActive="active" routerLink="/login">x</button>
     <p>Registrati</p>
     <form [formGroup]="registrazioneForm" (ngSubmit)="registrazione();" >
     <div class="form-group">
@@ -13,6 +13,6 @@
         <label for="password">Password</label>
         <input type="password" id="password"  formControlName="password" >
     </div>
-    <button type="submit" id="btnSub">Login</button>
+    <button type="submit" id="btnSub">Registrati</button>
 </form>
 </div>
