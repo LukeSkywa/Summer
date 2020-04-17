@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MyHttpService } from 'src/app/services/myhttp.service';
+import { ListItem } from 'src/app/models/ListItem';
 
 
 @Component({
@@ -11,7 +12,16 @@ export class ListaComponent implements OnInit {
   lista=[];
   constructor(private myHttpService: MyHttpService) { }
 
+  riempi(){
+    this.myHttpService.getCanzoni().subscribe(reponse => {
+      this.lista = reponse;
+      console.log(this.lista);
+    }, err => {
+      console.log('error');
+    });
+  }
   ngOnInit(): void {
+    this.riempi();
   }
 
 }
