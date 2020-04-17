@@ -5,8 +5,7 @@
   
   <ul>
     <li *ngFor="let menuItem of menuList">
-      {{menuItem.description}}
-      <button (click)="slectedComponent(menuItem.id)"> -></button>
+      <button (click)="slectedComponent(menuItem.id)"> {{menuItem.description}}</button>
     </li>
   </ul>
   
