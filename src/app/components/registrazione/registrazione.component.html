@@ -1,0 +1,18 @@
+
+<div>
+    <img src="logo.jpg" alt="logo">
+    <br>
+    <img src="xImg.jpg" alt="x">
+    <p>Registrati</p>
+    <form [formGroup]="registrazioneForm" (ngSubmit)="registrazione();" >
+    <div class="form-group">
+        <label for="username">Nome utente</label>
+        <input type="text" id="username" formControlName="username" >
+    </div>
+    <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password"  formControlName="password" >
+    </div>
+    <button type="submit" id="btnSub">Login</button>
+</form>
+</div>
