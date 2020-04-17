@@ -1,1 +1,16 @@
-<p>lista works!</p>
+<select #filtro>
+    <option value="all">Tutto</option>
+    <option value="pref">preferiti</option>
+    <option value="nasc">nascosti</option>
+</select>
+
+<button (click)="filtra(filtro.value)">Filtra</button>
+
+<ul>
+    <li>
+        <div  *ngFor="let item of lista">
+            <p>{{item.nome}}</p>
+            <p>{{item.autore}}, {{item.Rating}}</p>
+        </div>
+    </li>
+</ul>
