@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-//import { ListaComponent } from './lista/lista/lista.component';
+import { ListaComponent } from './lista/lista/lista.component';
 import { LoginComponent } from './components/login/login.component';
 import { EditGuardService } from './services/guards/edit-guard.service';
 import { GuardService } from './services/guards/guard.service';
 import { RegistrazioneComponent } from './components/registrazione/registrazione.component';
 import { HomeComponent } from './home/home.component';
-import { ListaComponent } from './lista/lista/lista.component';
+
 
 //questi sono i routes base man mano che create le cose e vi servono scommentate queste qua sotto e modificatele a piacimento
 const routes: Routes = [

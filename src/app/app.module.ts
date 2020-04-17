@@ -8,6 +8,8 @@ import { RegistrazioneComponent } from './components/registrazione/registrazione
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HomeComponent } from './home/home.component';
 import { MenuComponent } from './menu/menu.component';
+import { HttpClientModule } from '@angular/common/http';
+import { MyHttpService } from './services/myhttp.service';
 
 @NgModule({
   declarations: [
@@ -15,12 +17,14 @@ import { MenuComponent } from './menu/menu.component';
     LoginComponent,
     RegistrazioneComponent,
     HomeComponent,
-    MenuComponent
+    MenuComponent,
+    MyHttpService
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
+    HttpClientModule,
     FormsModule
   ],
   providers: [],
