@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { MyHttpService } from 'src/app/services/myhttp.service';
-import { ListItem } from 'src/app/models/ListItem';
-
 
 @Component({
   selector: 'app-lista',
@@ -34,7 +32,6 @@ export class ListaComponent implements OnInit {
 
   }
   ngOnInit(): void {
-    this.riempi();
   }
 
 }

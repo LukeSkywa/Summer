@@ -24,8 +24,8 @@ export class MyHttpService {
 
   constructor(private httpClient: HttpClient) { }
 
-  getCanzoni(): Observable<any>{
-    return this.httpClient.get('http://localhost:3000/canzoni');
+  getGames(): Observable<any>{
+    return this.httpClient.get('http://localhost:3000/giochi');
     
   }
 
