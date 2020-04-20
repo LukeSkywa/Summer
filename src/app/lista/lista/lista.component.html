@@ -8,13 +8,16 @@
 
 <ul>
     <li>
-        <div  *ngFor="let item of lista">
-            <p>{{item.nome}}</p>
-            <p>{{item.autore}}, {{item.Rating}}</p>
-            <button (click)="addPreferiti(item.id)">PREFERITI</button>
-            <ng-container *ngIf="item.preferito === true">
-                <p appHighlight>X</p>
-            </ng-container>
+        <div  *ngFor="let item of lista" >
+         
+                <p>{{item.nome}}</p>
+                <p>{{item.autore}}, {{item.Rating}}</p>
+                <button (click)="addPreferiti(item.id)">PREFERITI</button>
+                <button (click)="nascondi(item.id)">NASCONDI</button>
+                <ng-container *ngIf="item.preferito === true">
+                    <p appHighlight>X</p>
+                </ng-container>
+            
             
         </div>
     </li>

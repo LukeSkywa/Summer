@@ -28,6 +28,13 @@ export class MyHttpService {
   removePreferiti(id){
     return this.httpClient.patch<ListItem[]>('http://localhost:3000/canzoni/'+id,{preferito:false});
   }
+  //funzione che aggiunge a nascosto
+  addNascosto(id){
+    return this.httpClient.patch<ListItem[]>('http://localhost:3000/canzoni/'+id,{nascosto:true});
+  }
+  removeNscosto(id){
+    return this.httpClient.patch<ListItem[]>('http://localhost:3000/canzoni/'+id,{nascosto:false});
+  }
 
   
 

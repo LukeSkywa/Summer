@@ -9,7 +9,7 @@ import { MyHttpService } from 'src/app/services/myhttp.service';
 export class ListaComponent implements OnInit {
   lista=[];
   constructor(private myHttpService: MyHttpService) { }
-  
+
 //riempi la lista da db
   riempi(){
     this.myHttpService.getCanzoni().subscribe(reponse => {
@@ -50,6 +50,20 @@ export class ListaComponent implements OnInit {
   //metodo che quando si clicca su preferiti aggiunge effettivamente
   addPreferiti(id:number){
     this.Preferiti(id); 
+  }
+  nascondi(id){
+
+    this.myHttpService.getSingolo(id).subscribe(response => {
+      let temp=response;
+      if(temp.nascosto==true){
+      this.myHttpService.removeNscosto(id).subscribe();
+      this.riempi();
+      }
+      else this.myHttpService.addNascosto(id).subscribe();
+      this.riempi();
+    }, err => {
+     
+    });
   }
   ngOnInit(): void {
     this.riempi();
