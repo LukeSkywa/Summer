@@ -59,8 +59,10 @@ export class ListaComponent implements OnInit {
       this.myHttpService.removeNscosto(id).subscribe();
       this.riempi();
       }
-      else this.myHttpService.addNascosto(id).subscribe();
+      else{
+       this.myHttpService.addNascosto(id).subscribe();
       this.riempi();
+      }
     }, err => {
      
     });

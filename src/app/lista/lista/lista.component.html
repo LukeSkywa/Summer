@@ -13,7 +13,8 @@
                 <p>{{item.nome}}</p>
                 <p>{{item.autore}}, {{item.Rating}}</p>
                 <button (click)="addPreferiti(item.id)">PREFERITI</button>
-                <button (click)="nascondi(item.id)">NASCONDI</button>
+                <button  *ngIf="item.nascosto === false" (click)="nascondi(item.id)">NASCONDI</button>
+                <button  *ngIf="item.nascosto === true"(click)="nascondi(item.id)">MOSTRA</button>
                 <ng-container *ngIf="item.preferito === true">
                     <p appHighlight>X</p>
                 </ng-container>
