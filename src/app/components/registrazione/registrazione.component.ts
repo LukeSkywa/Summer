@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder} from '@angular/forms';
-import { RegistrazioneService } from 'src/app/services/registrazione/registrazione.service';
+import { LoginService } from 'src/app/services/login/login.service';
+
 
 @Component({
   selector: 'app-registrazione',
@@ -10,12 +11,24 @@ import { RegistrazioneService } from 'src/app/services/registrazione/registrazio
 export class RegistrazioneComponent implements OnInit {
 
   registrazioneForm : FormGroup;
+  passwordType : string = 'password';
+  passwordShow : boolean = false;
 
-  constructor(private fb : FormBuilder, private registrazioneService : RegistrazioneService) {
+  constructor(private fb : FormBuilder, private loginService : LoginService) {
     this.registrazioneForm=this.fb.group({
       username : "",
       password : ""
     })
+  }
+
+  togglePassword(){
+    if(this.passwordShow){
+      this.passwordShow=false;
+      this.passwordType='password';
+    }else{
+      this.passwordShow=true;
+      this.passwordType='text';
+    }
   }
 
   getUsername(){
@@ -30,7 +43,7 @@ export class RegistrazioneComponent implements OnInit {
   }
 
   registrazione(){
-    this.registrazioneService.eseguiRegistrazione(this.getUsername().value,this.getPassword().value);
+    this.loginService.eseguiRegistrazione(this.getUsername().value,this.getPassword().value);
   }
 
 }

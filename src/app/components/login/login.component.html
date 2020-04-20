@@ -6,11 +6,20 @@
     <form [formGroup]="loginForm" (ngSubmit)="login();" >
     <div class="form-group">
         <label for="username">Nome utente</label><br>
+        <span class="material-icons">
+            person 
+            </span>
         <input type="text" id="username" formControlName="username" placeholder="Mario.Rossi">
     </div>
     <div class="form-group">
         <label for="password">Password</label><br>
-        <input type="password" id="password" formControlName="password" required minlength="7" placeholder="qwerty">
+        <span class="material-icons">
+            enhanced_encryption
+            </span>
+        <input [type]="passwordType" id="password" formControlName="password" required minlength="7" placeholder="qwerty">
+        <span class="material-icons" (click)="togglePassword()">
+            visibility_off
+            </span>
     </div>
     <br><br>
     <button type="submit" id="btnSub">Login</button>
