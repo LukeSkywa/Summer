@@ -26,10 +26,24 @@ export class ListaComponent implements OnInit {
       console.log('error');
     });
   }
+  //aggiorna preferiti
+  //riempi lista filtrata
+  Preferiti(id){
+    this.myHttpService.addPreferiti(id).subscribe(reponse => {
+    }, err => {
+      console.log('error');
+    });
+  }
+  //metodo che da filtra al cambio di select
   filtra(value:string){
     if(value==="all") this.riempi();
     else this.retrieveFilter(value);
-
+  }
+  //metodo che quando si clicca su preferiti aggiunge effettivamente
+  addPreferiti(id:number){
+    this.Preferiti(id);
+    console.log(id);
+    
   }
   ngOnInit(): void {
     this.riempi();
