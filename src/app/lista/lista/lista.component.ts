@@ -9,6 +9,7 @@ import { MyHttpService } from 'src/app/services/myhttp.service';
 export class ListaComponent implements OnInit {
   lista=[];
   constructor(private myHttpService: MyHttpService) { }
+  
 //riempi la lista da db
   riempi(){
     this.myHttpService.getCanzoni().subscribe(reponse => {
@@ -27,12 +28,19 @@ export class ListaComponent implements OnInit {
     });
   }
   //aggiorna preferiti
-  //riempi lista filtrata
   Preferiti(id){
-    this.myHttpService.addPreferiti(id).subscribe(reponse => {
+    this.myHttpService.getSingolo(id).subscribe(response => {
+      let temp=response;
+      if(temp.preferito==true){
+      this.myHttpService.removePreferiti(id).subscribe();
+      this.riempi();
+      }
+      else this.myHttpService.addPreferiti(id).subscribe();
+      this.riempi();
     }, err => {
-      console.log('error');
+     
     });
+    
   }
   //metodo che da filtra al cambio di select
   filtra(value:string){
@@ -41,9 +49,7 @@ export class ListaComponent implements OnInit {
   }
   //metodo che quando si clicca su preferiti aggiunge effettivamente
   addPreferiti(id:number){
-    this.Preferiti(id);
-    console.log(id);
-    
+    this.Preferiti(id); 
   }
   ngOnInit(): void {
     this.riempi();

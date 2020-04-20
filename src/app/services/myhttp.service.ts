@@ -23,10 +23,10 @@ export class MyHttpService {
   }
   //funzione che aggiunge ai preferiti
   addPreferiti(id){
-
-    let params: HttpParams;
-
     return this.httpClient.patch<ListItem[]>('http://localhost:3000/canzoni/'+id,{preferito:true});
+  }
+  removePreferiti(id){
+    return this.httpClient.patch<ListItem[]>('http://localhost:3000/canzoni/'+id,{preferito:false});
   }
 
   
@@ -35,6 +35,10 @@ export class MyHttpService {
 
   getCanzoni(): Observable<any>{
     return this.httpClient.get('http://localhost:3000/canzoni');
+  }
+
+  getSingolo(id): Observable<any>{
+    return this.httpClient.get('http://localhost:3000/canzoni/'+id);
   }
 
 }
