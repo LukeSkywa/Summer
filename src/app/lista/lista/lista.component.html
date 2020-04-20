@@ -9,7 +9,7 @@
 <ul>
     <li>
         <div  *ngFor="let item of lista" >
-         
+            <ng-container *ngIf="item.nascosto === false || filtro.value === 'nasc'">
                 <p>{{item.nome}}</p>
                 <p>{{item.autore}}, {{item.Rating}}</p>
                 <button (click)="addPreferiti(item.id)">PREFERITI</button>
@@ -17,8 +17,7 @@
                 <ng-container *ngIf="item.preferito === true">
                     <p appHighlight>X</p>
                 </ng-container>
-            
-            
+            </ng-container>
         </div>
     </li>
 </ul>
