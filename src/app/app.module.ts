@@ -3,26 +3,38 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ListaComponent } from './lista/lista/lista.component';
-import { HttpClientModule } from '@angular/common/http';
-import { HomeComponent } from './components/home/home.component';
-import { MenuComponent } from './components/menu/menu.component';
 import { LoginComponent } from './components/login/login.component';
+import { RegistrazioneComponent } from './components/registrazione/registrazione.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { HomeComponent } from './home/home.component';
+import { MenuComponent } from './menu/menu.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ListaComponent } from './lista/lista/lista.component';
+import { HighlightDirective } from './directives/highlight-directive.service';
+import { DettaglioComponent } from './components/dettaglio/dettaglio.component';
+import { FeedbackComponent } from './components/feedback/feedback.component';
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
+    RegistrazioneComponent,
     HomeComponent,
-    MenuComponent
+    MenuComponent,
+    ListaComponent,
+    HighlightDirective,
+    DettaglioComponent,
+    FeedbackComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    ReactiveFormsModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,6 @@
+<ul>
+  <li *ngFor="let menuItem of menuList">
+    <button [routerLink]="menuItem.url" class="bottone"> {{menuItem.description}}</button>
+  </li>
+</ul>
+  

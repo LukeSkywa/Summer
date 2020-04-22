@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder} from '@angular/forms';
+import { LoginService } from 'src/app/services/login/login.service';
 
 
 @Component({
@@ -12,7 +13,7 @@ export class LoginComponent implements OnInit {
   loginForm : FormGroup;
 
 
-  constructor(private fb : FormBuilder) {
+  constructor(private fb : FormBuilder, private loginService : LoginService) {
     this.loginForm=this.fb.group({
       username : "",
       password : ""
@@ -23,6 +24,12 @@ export class LoginComponent implements OnInit {
   }
 
   login() {
+    this.loginService.eseguiLogin(this.loginForm.get("username").value,this.loginForm.get("password").value);
+  }
+
+  //da mettere in home
+  logout(){
+    this.loginService.eseguiLogout();
   }
 
 }
