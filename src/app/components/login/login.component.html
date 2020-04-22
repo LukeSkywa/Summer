@@ -1,25 +1,25 @@
-<div class="loginForm">
+<div class="div_login">
     <img src="logo.jpg" alt="logo">
     <br>
     <button type="button" routerLinkActive="active" routerLink="/registrati">+</button>
     <p>Accedi</p>
     <form [formGroup]="loginForm" (ngSubmit)="login();" >
     <div class="form-group">
-        <label for="username">Nome utente</label><br>
+        <label for="username" id="lbl">Nome utente</label><br>
         <span class="material-icons">
             person 
-            </span>
+        </span>
         <input type="text" id="username" formControlName="username" placeholder="Mario.Rossi">
     </div>
     <div class="form-group">
-        <label for="password">Password</label><br>
+        <label for="password" id="lbl">Password</label><br>
         <span class="material-icons">
             enhanced_encryption
             </span>
         <input [type]="passwordType" id="password" formControlName="password" required minlength="7" placeholder="qwerty">
         <span class="material-icons" (click)="togglePassword()">
             visibility_off
-            </span>
+        </span>
     </div>
     <br><br>
     <button type="submit" id="btnSub">Login</button>

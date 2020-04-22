@@ -18,7 +18,7 @@ const routes: Routes = [
      { path: 'lista', component: ListaComponent},
  //  { path: 'dettaglio/:id', component: DettaglioComponent, canActivate: [MyRouteGuardService]},
      { path: 'registrati', component: RegistrazioneComponent},
-     { path: 'profilo', component: ProfiloComponent},
+     { path: 'profilo', component: ProfiloComponent, canActivate: [GuardService]},
      { path: '', redirectTo: '/login', pathMatch: 'full' },
  //  { path: '**', component: PageNotFoundComponent }
 ];

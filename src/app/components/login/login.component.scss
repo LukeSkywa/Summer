@@ -1,8 +1,18 @@
-.loginForm{
+.div_login{
     margin : 0 auto;
     display: table;
-    background-color: blue;
-    span {
-        color: white;
-    }
+    background-color:rgb(2,0,38);
+//     background: linear-gradient(90deg, rgba(2,0,38,1) 0%, rgba(41,80,99,1) 48%, rgba(48,127,176,1) 100%);;
+    color : white;
+    text-align: center;
+}
+
+#lbl{
+    margin-left: 13%;
+    margin-right: 31%;
+}
+
+span {
+    color: white;
+    
 }
