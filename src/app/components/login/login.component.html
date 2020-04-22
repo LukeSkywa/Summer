@@ -11,6 +11,11 @@
     <div class="form-group">
         <label for="password">Password</label>
         <input type="password" id="password"  formControlName="password" >
+        <mat-slide-toggle
+          [color]="red"
+          [checked]="checked">
+        RICORDA LA PASSWORD
+      </mat-slide-toggle>
     </div>
     <button type="submit" id="btnSub">Login</button>
 </form>

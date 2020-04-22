@@ -11,6 +11,8 @@ import { LoginService } from 'src/app/services/login/login.service';
 export class LoginComponent implements OnInit {
 
   loginForm : FormGroup;
+  checked=false;
+  
 
 
   constructor(private fb : FormBuilder, private loginService : LoginService) {

@@ -13,6 +13,8 @@ import { ListaComponent } from './lista/lista/lista.component';
 import { HighlightDirective } from './directives/highlight-directive.service';
 import { DettaglioComponent } from './components/dettaglio/dettaglio.component';
 import { FeedbackComponent } from './components/feedback/feedback.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 
 
 
@@ -34,7 +36,8 @@ import { FeedbackComponent } from './components/feedback/feedback.component';
     ReactiveFormsModule,
     HttpClientModule,
     FormsModule,
-    
+    BrowserAnimationsModule,
+    MatSlideToggleModule
   ],
   providers: [],
   bootstrap: [AppComponent]
