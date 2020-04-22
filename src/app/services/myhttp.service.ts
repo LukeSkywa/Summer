@@ -9,6 +9,13 @@ import { ListItem } from '../models/ListItem';
   providedIn: 'root'
 })
 export class MyHttpService {
+  invia(url: string, body: { name: any; replyto: any; message: any; }, arg2: {
+    headers: import("@angular/common/http").HttpHeaders;
+  }) {
+
+    return this.httpClient.post(url,body,arg2); 
+   }
+  
    //funzione che filtra
    getFiltra(value: string): Observable<HttpResponse<ListItem[]>> {
     //stringa di comodo
@@ -21,12 +28,31 @@ export class MyHttpService {
 
     return this.httpClient.get<ListItem[]>('http://localhost:3000/canzoni', { observe: 'response',  params: params });
   }
+  //funzione che aggiunge ai preferiti
+  addPreferiti(id){
+    return this.httpClient.patch<ListItem[]>('http://localhost:3000/canzoni/'+id,{preferito:true});
+  }
+  removePreferiti(id){
+    return this.httpClient.patch<ListItem[]>('http://localhost:3000/canzoni/'+id,{preferito:false});
+  }
+  //funzione che aggiunge a nascosto
+  addNascosto(id){
+    return this.httpClient.patch<ListItem[]>('http://localhost:3000/canzoni/'+id,{nascosto:true});
+  }
+  removeNscosto(id){
+    return this.httpClient.patch<ListItem[]>('http://localhost:3000/canzoni/'+id,{nascosto:false});
+  }
+
+  
 
   constructor(private httpClient: HttpClient) { }
 
   getCanzoni(): Observable<any>{
     return this.httpClient.get('http://localhost:3000/canzoni');
-    
+  }
+
+  getSingolo(id): Observable<any>{
+    return this.httpClient.get('http://localhost:3000/canzoni/'+id);
   }
 
 }

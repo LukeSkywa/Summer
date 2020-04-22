@@ -1,3 +1,33 @@
+   <!--<mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark indigo">
+        <mdb-navbar-brand>
+            <a  class="navbar-brand">Navbar</a>
+
+        </mdb-navbar-brand>
+        <links>
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link waves-light" mdbWavesEffect>Homepage </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link waves-light" mdbWavesEffect>Lista </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link waves-light" mdbWavesEffect>Cards </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link waves-light" mdbWavesEffect>Feedback </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link waves-light" mdbWavesEffect>Profilo </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link waves-light" mdbWavesEffect>Esci </a>
+                </li>
+            </ul>
+        </links>
+    </mdb-navbar>
+-->
+
 <select #filtro>
     <option value="all">Tutto</option>
     <option value="pref">preferiti</option>
@@ -8,9 +38,19 @@
 
 <ul>
     <li>
-        <div  *ngFor="let item of lista">
-            <p>{{item.nome}}</p>
-            <p>{{item.autore}}, {{item.Rating}}</p>
+        <div  *ngFor="let item of lista" >
+            <ng-container *ngIf="item.nascosto === false || filtro.value === 'nasc'">
+                <p>{{item.nome}}</p>
+                <p>{{item.autore}}, {{item.Rating}}</p>
+                <!--bottoni per le varie opzioni-->
+                <button (click)="addPreferiti(item.id,filtro.value)">PREFERITI</button>
+                <button  *ngIf="item.nascosto === false" (click)="nascondi(item.id,filtro.value)">NASCONDI</button>
+                <button  *ngIf="item.nascosto === true"(click)="nascondi(item.id,filtro.value)">MOSTRA</button>
+                <button (click)="apriD(item.id)">Dettaglio</button>
+                <ng-container *ngIf="item.preferito === true">
+                    <p appHighlight>☆</p>
+                </ng-container>
+            </ng-container>
         </div>
     </li>
 </ul>

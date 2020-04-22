@@ -8,6 +8,14 @@ import { RegistrazioneComponent } from './components/registrazione/registrazione
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HomeComponent } from './home/home.component';
 import { MenuComponent } from './menu/menu.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ListaComponent } from './lista/lista/lista.component';
+import { HighlightDirective } from './directives/highlight-directive.service';
+import { DettaglioComponent } from './components/dettaglio/dettaglio.component';
+import { FeedbackComponent } from './components/feedback/feedback.component';
+import { MyHttpService } from './services/myhttp.service';
+
+
 
 @NgModule({
   declarations: [
@@ -15,13 +23,18 @@ import { MenuComponent } from './menu/menu.component';
     LoginComponent,
     RegistrazioneComponent,
     HomeComponent,
-    MenuComponent
+    MenuComponent,
+    ListaComponent,
+    HighlightDirective,
+    DettaglioComponent,
+    FeedbackComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    FormsModule
+    HttpClientModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
