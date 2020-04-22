@@ -14,6 +14,7 @@ import { DettaglioComponent } from './components/dettaglio/dettaglio.component';
 import { FeedbackComponent } from './components/feedback/feedback.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatCardModule} from '@angular/material/card';
+import { CardsComponent } from './components/cards/cards.component';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import {MatCardModule} from '@angular/material/card';
     ListaComponent,
     HighlightDirective,
     DettaglioComponent,
-    FeedbackComponent
+    FeedbackComponent,
+    CardsComponent
   ],
   imports: [
     BrowserModule,

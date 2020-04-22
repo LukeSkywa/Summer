@@ -8,13 +8,14 @@ import { RegistrazioneComponent } from './components/registrazione/registrazione
 import { HomeComponent } from './home/home.component';
 import { DettaglioComponent } from './components/dettaglio/dettaglio.component';
 import { FeedbackComponent } from './components/feedback/feedback.component';
-
+import { CardsComponent } from './components/cards/cards.component';
 
 //questi sono i routes base man mano che create le cose e vi servono scommentate queste qua sotto e modificatele a piacimento
 const routes: Routes = [
     { path: 'login', component: LoginComponent },
     { path: 'home', component: HomeComponent },
   // { path: 'funzionalita', component: FunzionalitaComponent, canActivate: [GuardService]},
+    { path: 'cards', component: CardsComponent},
     { path: 'feedback', component: FeedbackComponent},
     { path: 'lista', component: ListaComponent},
     { path: 'dettaglio/:id', component: DettaglioComponent},
