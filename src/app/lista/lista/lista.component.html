@@ -33,6 +33,7 @@
 
 <button (click)="filtra(filtro.value)">Filtra</button>
 
+<<<<<<< HEAD
     <ul>
      <li>
           <div  *ngFor="let item of lista">
@@ -41,3 +42,21 @@
           </div>
         </li>
     </ul>
+=======
+<ul>
+    <li>
+        <div  *ngFor="let item of lista" >
+            <ng-container *ngIf="item.nascosto === false || filtro.value === 'nasc'">
+                <p>{{item.nome}}</p>
+                <p>{{item.autore}}, {{item.Rating}}</p>
+                <button (click)="addPreferiti(item.id)">PREFERITI</button>
+                <button  *ngIf="item.nascosto === false" (click)="nascondi(item.id)">NASCONDI</button>
+                <button  *ngIf="item.nascosto === true"(click)="nascondi(item.id)">MOSTRA</button>
+                <ng-container *ngIf="item.preferito === true">
+                    <p appHighlight>X</p>
+                </ng-container>
+            </ng-container>
+        </div>
+    </li>
+</ul>
+>>>>>>> b3af669d45d8cab52a9e33848eee241ff57451ee

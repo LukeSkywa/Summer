@@ -10,6 +10,7 @@ import { HomeComponent } from './home/home.component';
 import { MenuComponent } from './menu/menu.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ListaComponent } from './lista/lista/lista.component';
+import { HighlightDirective } from './directives/highlight-directive.service';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { ListaComponent } from './lista/lista/lista.component';
     RegistrazioneComponent,
     HomeComponent,
     MenuComponent,
-    ListaComponent
+    ListaComponent,
+    HighlightDirective
    
   ],
   imports: [
