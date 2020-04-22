@@ -12,7 +12,7 @@ import { UserItem } from 'src/app/models/user-item.interface';
 export class LoginComponent implements OnInit {
 
   loginForm : FormGroup;
-  checked=false;
+  checked=true;
   
 
 
@@ -24,6 +24,14 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    
+   if(sessionStorage.getItem("usernameS")!=null){
+    this.loginForm=this.fb.group({
+      username : sessionStorage.getItem("usernameS"),
+      password : sessionStorage.getItem("passwordS")
+    })
+   }
+    
   }
 
   getUsername(){
@@ -36,6 +44,17 @@ export class LoginComponent implements OnInit {
 
   login() {
     this.loginService.eseguiLogin(this.getUsername().value,this.getPassword().value);
+    this.salva();
+  }
+  salva(){
+    if(this.checked===true){
+    sessionStorage.setItem("usernameS",this.getUsername().value);
+    sessionStorage.setItem("passwordS",this.getPassword().value);
+    }
+  }
+  modifica(){
+    this.checked=!this.checked;
+    console.log(this.checked);
   }
 
   //da mettere in home

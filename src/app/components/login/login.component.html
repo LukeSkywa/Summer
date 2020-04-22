@@ -12,7 +12,8 @@
         <label for="password">Password</label>
         <input type="password" id="password"  formControlName="password" >
         <mat-slide-toggle
-          [checked]="checked">
+          (click)="modifica()"
+          [checked]="!checked">
         RICORDA LA PASSWORD
       </mat-slide-toggle>
     </div>
