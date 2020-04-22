@@ -31,8 +31,9 @@ export class LoginService {
         sessionStorage.setItem("user", username);
         //sessionStorage.setItem("password", password);
         //non ancora implementato
-        //this.router.navigateByUrl('/portale/home');
+        
         window.alert('benvenuto');
+        this.router.navigateByUrl('/home');
       }else{
         window.alert('login fallita');
     }

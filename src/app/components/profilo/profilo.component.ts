@@ -27,4 +27,8 @@ export class ProfiloComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  updateInfo(){
+    
+  }
+
 }
