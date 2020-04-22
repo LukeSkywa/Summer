@@ -12,6 +12,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ListaComponent } from './lista/lista/lista.component';
 import { HighlightDirective } from './directives/highlight-directive.service';
 import { DettaglioComponent } from './components/dettaglio/dettaglio.component';
+import { FeedbackComponent } from './components/feedback/feedback.component';
 
 
 
@@ -24,7 +25,8 @@ import { DettaglioComponent } from './components/dettaglio/dettaglio.component';
     MenuComponent,
     ListaComponent,
     HighlightDirective,
-    DettaglioComponent
+    DettaglioComponent,
+    FeedbackComponent
   ],
   imports: [
     BrowserModule,
