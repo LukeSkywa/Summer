@@ -10,6 +10,7 @@ import { LoginService } from 'src/app/services/login/login.service';
 export class ProfiloComponent implements OnInit {
 
   profiloForm : FormGroup;
+  utente : string;
 
   constructor(private fb : FormBuilder, private loginService : LoginService) {
     this.profiloForm=this.fb.group({
@@ -19,10 +20,11 @@ export class ProfiloComponent implements OnInit {
       email : ["", Validators.required],
       telephone : ["", Validators.required]
     })
+
+    this.utente=sessionStorage.getItem('user');
    }
 
   ngOnInit(): void {
-    this.loginService.getUser(sessionStorage.getItem("user"))
   }
 
 }
