@@ -11,6 +11,8 @@ import { MenuComponent } from './menu/menu.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ListaComponent } from './lista/lista/lista.component';
 import { HighlightDirective } from './directives/highlight-directive.service';
+import { DettaglioComponent } from './components/dettaglio/dettaglio.component';
+
 
 
 @NgModule({
@@ -21,8 +23,8 @@ import { HighlightDirective } from './directives/highlight-directive.service';
     HomeComponent,
     MenuComponent,
     ListaComponent,
-    HighlightDirective
-   
+    HighlightDirective,
+    DettaglioComponent
   ],
   imports: [
     BrowserModule,

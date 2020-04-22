@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MyHttpService } from 'src/app/services/myhttp.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-lista',
@@ -8,7 +9,7 @@ import { MyHttpService } from 'src/app/services/myhttp.service';
 })
 export class ListaComponent implements OnInit {
   lista=[];
-  constructor(private myHttpService: MyHttpService) { }
+  constructor(private myHttpService: MyHttpService,private router: Router) { }
 
 //riempi la lista da db
   riempi(){
@@ -68,6 +69,9 @@ export class ListaComponent implements OnInit {
     }, err => {
      
     });
+  }
+  apriD(id:number){
+    this.router.navigate(['/dettaglio',id]);
   }
   ngOnInit(): void {
     this.riempi();

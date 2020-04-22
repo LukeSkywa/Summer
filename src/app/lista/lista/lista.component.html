@@ -1,6 +1,7 @@
-   <mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark indigo">
+   <!--<mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark indigo">
         <mdb-navbar-brand>
-            <a href="#" class="navbar-brand">Navbar</a>
+            <a  class="navbar-brand">Navbar</a>
+
         </mdb-navbar-brand>
         <links>
             <ul class="navbar-nav">
@@ -25,6 +26,8 @@
             </ul>
         </links>
     </mdb-navbar>
+-->
+
 <select #filtro>
     <option value="all">Tutto</option>
     <option value="pref">preferiti</option>
@@ -43,6 +46,7 @@
                 <button (click)="addPreferiti(item.id,filtro.value)">PREFERITI</button>
                 <button  *ngIf="item.nascosto === false" (click)="nascondi(item.id,filtro.value)">NASCONDI</button>
                 <button  *ngIf="item.nascosto === true"(click)="nascondi(item.id,filtro.value)">MOSTRA</button>
+                <button (click)="apriD(item.id)">Dettaglio</button>
                 <ng-container *ngIf="item.preferito === true">
                     <p appHighlight>☆</p>
                 </ng-container>
