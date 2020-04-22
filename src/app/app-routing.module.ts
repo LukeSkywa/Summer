@@ -7,6 +7,7 @@ import { GuardService } from './services/guards/guard.service';
 import { RegistrazioneComponent } from './components/registrazione/registrazione.component';
 import { HomeComponent } from './home/home.component';
 import { ListaComponent } from './lista/lista/lista.component';
+import { ProfiloComponent } from './components/profilo/profilo.component';
 
 //questi sono i routes base man mano che create le cose e vi servono scommentate queste qua sotto e modificatele a piacimento
 const routes: Routes = [
@@ -17,6 +18,7 @@ const routes: Routes = [
      { path: 'lista', component: ListaComponent},
  //  { path: 'dettaglio/:id', component: DettaglioComponent, canActivate: [MyRouteGuardService]},
      { path: 'registrati', component: RegistrazioneComponent},
+     { path: 'profilo', component: ProfiloComponent},
      { path: '', redirectTo: '/login', pathMatch: 'full' },
  //  { path: '**', component: PageNotFoundComponent }
 ];

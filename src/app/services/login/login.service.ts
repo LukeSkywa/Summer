@@ -60,6 +60,9 @@ export class LoginService {
     sessionStorage.removeItem("password");
     window.alert("logout effettuato, arrivederci");
     this.router.navigateByUrl('/login');
+  }
+
+  getUser(username:string){
     
   }
 }

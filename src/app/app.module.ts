@@ -8,6 +8,7 @@ import { RegistrazioneComponent } from './components/registrazione/registrazione
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HomeComponent } from './home/home.component';
 import { MenuComponent } from './menu/menu.component';
+import { ProfiloComponent } from './components/profilo/profilo.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { MenuComponent } from './menu/menu.component';
     LoginComponent,
     RegistrazioneComponent,
     HomeComponent,
-    MenuComponent
+    MenuComponent,
+    ProfiloComponent
   ],
   imports: [
     BrowserModule,
