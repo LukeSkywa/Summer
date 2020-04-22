@@ -1,8 +1,6 @@
+
 import { TestBed } from '@angular/core/testing';
 import { MyHttpService } from './myhttp.service';
-
-
-
 
 describe('MyhttpService', () => {
   let service:  MyHttpService;

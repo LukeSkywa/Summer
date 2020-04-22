@@ -1,22 +1,22 @@
-<div>
+<div class="loginForm">
     <img src="logo.jpg" alt="logo">
     <br>
     <button type="button" routerLinkActive="active" routerLink="/registrati">+</button>
     <p>Accedi</p>
     <form [formGroup]="loginForm" (ngSubmit)="login();" >
     <div class="form-group">
-        <label for="username">Nome utente</label>
-        <input type="text" id="username" formControlName="username" >
+        <label for="username">Nome utente</label><br>
+        <input type="text" id="username" formControlName="username" placeholder="Mario.Rossi">
     </div>
     <div class="form-group">
         <label for="password">Password</label>
         <input type="password" id="password"  formControlName="password" >
         <mat-slide-toggle
-          [color]="red"
           [checked]="checked">
         RICORDA LA PASSWORD
       </mat-slide-toggle>
     </div>
+    <br><br>
     <button type="submit" id="btnSub">Login</button>
 </form>
 </div>
