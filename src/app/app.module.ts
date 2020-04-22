@@ -14,6 +14,7 @@ import { DettaglioComponent } from './components/dettaglio/dettaglio.component';
 import { FeedbackComponent } from './components/feedback/feedback.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatCardModule} from '@angular/material/card';
+import {SlideshowModule} from 'ng-simple-slideshow';
 
 
 @NgModule({
@@ -35,7 +36,8 @@ import {MatCardModule} from '@angular/material/card';
     HttpClientModule,
     FormsModule,
     BrowserAnimationsModule,
-    MatCardModule
+    MatCardModule,
+    SlideshowModule
     
   ],
   providers: [],
