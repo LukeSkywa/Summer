@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-feedback',
@@ -7,7 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FeedbackComponent implements OnInit {
 
-  constructor() { }
+  feedform:FormGroup;
+
+  constructor(private fb: FormBuilder) {
+    this.feedform = this.fb.group({
+      nome: '',
+      cognome: '',
+      genere:'',
+      email:'',
+      telelfono:'',
+      commenti:'',
+    });
+   }
 
   ngOnInit(): void {
   }
