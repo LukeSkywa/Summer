@@ -1,3 +1,30 @@
+   <mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark indigo">
+        <mdb-navbar-brand>
+            <a href="#" class="navbar-brand">Navbar</a>
+        </mdb-navbar-brand>
+        <links>
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link waves-light" mdbWavesEffect>Homepage </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link waves-light" mdbWavesEffect>Lista </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link waves-light" mdbWavesEffect>Cards </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link waves-light" mdbWavesEffect>Feedback </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link waves-light" mdbWavesEffect>Profilo </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link waves-light" mdbWavesEffect>Esci </a>
+                </li>
+            </ul>
+        </links>
+    </mdb-navbar>
 <select #filtro>
     <option value="all">Tutto</option>
     <option value="pref">preferiti</option>
@@ -6,11 +33,11 @@
 
 <button (click)="filtra(filtro.value)">Filtra</button>
 
-<ul>
-    <li>
-        <div  *ngFor="let item of lista">
-            <p>{{item.nome}}</p>
-            <p>{{item.autore}}, {{item.Rating}}</p>
-        </div>
-    </li>
-</ul>
+    <ul>
+     <li>
+          <div  *ngFor="let item of lista">
+               <p>{{item.nome}}</p>
+               <p>{{item.autore}}, {{item.Rating}}</p>
+          </div>
+        </li>
+    </ul>
