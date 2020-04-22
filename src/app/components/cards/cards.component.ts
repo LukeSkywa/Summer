@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
   templateUrl: './cards.component.html',
   styleUrls: ['./cards.component.scss']
 })
-export class cardsComponent implements OnInit {
+export class CardsComponent implements OnInit {
   cards=[];
   constructor(private myHttpService: MyHttpService,private router: Router) { }
 
