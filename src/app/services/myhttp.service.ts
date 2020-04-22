@@ -9,6 +9,13 @@ import { ListItem } from '../models/ListItem';
   providedIn: 'root'
 })
 export class MyHttpService {
+  invia(url: string, body: { name: any; replyto: any; message: any; }, arg2: {
+    headers: import("@angular/common/http").HttpHeaders;
+  }) {
+
+    return this.httpClient.post(url,body,arg2); 
+   }
+  
    //funzione che filtra
    getFiltra(value: string): Observable<HttpResponse<ListItem[]>> {
     //stringa di comodo

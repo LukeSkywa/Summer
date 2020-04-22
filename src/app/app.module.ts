@@ -10,6 +10,13 @@ import { HomeComponent } from './home/home.component';
 import { MenuComponent } from './menu/menu.component';
 import { ProfiloComponent } from './components/profilo/profilo.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ListaComponent } from './lista/lista/lista.component';
+import { HighlightDirective } from './directives/highlight-directive.service';
+import { DettaglioComponent } from './components/dettaglio/dettaglio.component';
+import { FeedbackComponent } from './components/feedback/feedback.component';
+import { MyHttpService } from './services/myhttp.service';
+
+
 
 @NgModule({
   declarations: [
@@ -18,7 +25,11 @@ import { HttpClientModule } from '@angular/common/http';
     RegistrazioneComponent,
     HomeComponent,
     MenuComponent,
-    ProfiloComponent
+    ProfiloComponent,
+    ListaComponent,
+    HighlightDirective,
+    DettaglioComponent,
+    FeedbackComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +37,6 @@ import { HttpClientModule } from '@angular/common/http';
     ReactiveFormsModule,
     HttpClientModule,
     FormsModule,
-    
   ],
   providers: [],
   bootstrap: [AppComponent]

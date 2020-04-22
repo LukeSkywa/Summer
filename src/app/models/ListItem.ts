@@ -1,11 +1,11 @@
 export interface ListItem{
-    Id :number;
-    Nome:string;
+    id :number;
+    nome:string;
     autore:string;
-    Genere:number;
-    Rating:number;
+    genere:number;
+    rating:number;
     riproduzioni:number;
-    Annouscita:Date;
+    annouscita:Date;
     nascosto:boolean;
     preferito:boolean;
 

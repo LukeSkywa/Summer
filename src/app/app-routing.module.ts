@@ -7,6 +7,8 @@ import { RegistrazioneComponent } from './components/registrazione/registrazione
 import { HomeComponent } from './home/home.component';
 import { ListaComponent } from './lista/lista/lista.component';
 import { ProfiloComponent } from './components/profilo/profilo.component';
+import { DettaglioComponent } from './components/dettaglio/dettaglio.component';
+import { FeedbackComponent } from './components/feedback/feedback.component';
 
 
 //questi sono i routes base man mano che create le cose e vi servono scommentate queste qua sotto e modificatele a piacimento
