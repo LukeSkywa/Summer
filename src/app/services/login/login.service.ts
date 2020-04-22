@@ -9,6 +9,7 @@ export class LoginService {
 
   usersList : UserItem[] = [
     {username: "louis" , password : "gigino"}
+    //name: "", surname: "", gender: "", email: "", telephone: ""}
   ]
 
   constructor(private router: Router) { }
@@ -60,9 +61,5 @@ export class LoginService {
     sessionStorage.removeItem("password");
     window.alert("logout effettuato, arrivederci");
     this.router.navigateByUrl('/login');
-  }
-
-  getUser(username:string){
-    
   }
 }
