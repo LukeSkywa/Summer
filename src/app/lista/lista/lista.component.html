@@ -12,11 +12,12 @@
             <ng-container *ngIf="item.nascosto === false || filtro.value === 'nasc'">
                 <p>{{item.nome}}</p>
                 <p>{{item.autore}}, {{item.Rating}}</p>
-                <button (click)="addPreferiti(item.id)">PREFERITI</button>
-                <button  *ngIf="item.nascosto === false" (click)="nascondi(item.id)">NASCONDI</button>
-                <button  *ngIf="item.nascosto === true"(click)="nascondi(item.id)">MOSTRA</button>
+                <!--bottoni per le varie opzioni-->
+                <button (click)="addPreferiti(item.id,filtro.value)">PREFERITI</button>
+                <button  *ngIf="item.nascosto === false" (click)="nascondi(item.id,filtro.value)">NASCONDI</button>
+                <button  *ngIf="item.nascosto === true"(click)="nascondi(item.id,filtro.value)">MOSTRA</button>
                 <ng-container *ngIf="item.preferito === true">
-                    <p appHighlight>X</p>
+                    <p appHighlight>☆</p>
                 </ng-container>
             </ng-container>
         </div>

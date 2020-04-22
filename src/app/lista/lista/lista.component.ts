@@ -28,15 +28,17 @@ export class ListaComponent implements OnInit {
     });
   }
   //aggiorna preferiti
-  Preferiti(id){
+  Preferiti(id,value){
     this.myHttpService.getSingolo(id).subscribe(response => {
       let temp=response;
       if(temp.preferito==true){
-      this.myHttpService.removePreferiti(id).subscribe();
-      this.riempi();
+        this.myHttpService.removePreferiti(id).subscribe();
+        this.filtra(value)
       }
-      else this.myHttpService.addPreferiti(id).subscribe();
-      this.riempi();
+      else {
+        this.myHttpService.addPreferiti(id).subscribe();
+        this.filtra(value);
+      }
     }, err => {
      
     });
@@ -48,20 +50,20 @@ export class ListaComponent implements OnInit {
     else this.retrieveFilter(value);
   }
   //metodo che quando si clicca su preferiti aggiunge effettivamente
-  addPreferiti(id:number){
-    this.Preferiti(id); 
+  addPreferiti(id:number,value){
+    this.Preferiti(id,value); 
   }
-  nascondi(id){
+  nascondi(id,value){
 
     this.myHttpService.getSingolo(id).subscribe(response => {
       let temp=response;
       if(temp.nascosto==true){
       this.myHttpService.removeNscosto(id).subscribe();
-      this.riempi();
+      this.filtra(value);
       }
       else{
        this.myHttpService.addNascosto(id).subscribe();
-      this.riempi();
+      this.filtra(value);
       }
     }, err => {
      
