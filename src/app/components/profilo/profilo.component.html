@@ -1,71 +1,98 @@
 <div class="profiloForm">
 
+    <p>Benvenuto</p>
+    <p id="bold_info">{{user.name}} {{user.surname}}</p>
     
-    <p>Benvenuto {{utente}}</p>
-    <p>{{user.name}}</p>
-    <p>{{user.surname}}</p>
-    <p>{{user.email}}</p>
-    <p>{{user.telephone}}</p>
-    <button (click)="cliccato()" id="btn_edit">Modifica</button>
+
+    <div class="informations">
+        <div class="info">
+            <div class="item1"><label for="name">Name</label></div>
+            <div class="item2">{{user.name}}</div>
+        </div>
+
+        <div class="info">
+            <div class="item1"><label for="surname">Cognome</label></div>
+            <div class="item2">{{user.surname}}</div>
+        </div>
+
+        <div class="info">
+            <div class="item1"><label for="gender">Gender</label></div>
+            <div class="item2">{{user.gender}}</div>
+        </div>
+
+        <div class="info">
+            <div class="item1"><label for="email">Email</label></div>
+            <div class="item2">{{user.email}}</div>
+        </div>
+
+        <div class="info">
+            <div class="item1"><label for="telephone">Telephone</label></div>
+            <div class="item2">{{user.telephone}}</div>
+        </div>
+            
+        <button (click)="cliccato()" id="btn_edit">Modifica</button>
+    </div>
+
+    
     
     <ng-container *ngIf="daModificare">
         <form [formGroup]="profiloForm" (ngSubmit)="onSubmit(profiloForm.value)">
             <div class="form-group">
-                <div class=item1>
+                <div class=item1_edit>
                     <label for="name">Name</label>
                 </div>
                 
-                <div class="item2">
-                    <input type="text" id="name" formControlName="name" placeholder="Luca">
+                <div class="item2_edit">
+                    <input type="text" id="name" formControlName="name" placeholder="">
                 </div>
             </div>
 
             <div class="form-group">
-                <div class="item1">
+                <div class="item1_edit">
                     <label for="surname">Surname</label>
                 </div>
                 
-                <div class="item2">
-                    <input type="text" id="surname" formControlName="surname" placeholder="Alicata">
+                <div class="item2_edit">
+                    <input type="text" id="surname" formControlName="surname" placeholder="">
                 </div>
             </div>
 
             <div class="form-group">
-                <div class=item1>
+                <div class="item1_edit">
                     <label for="gender">Gender</label>
                 </div>
                 
-                <div class="item2">
-                    <select name="gender" id="gender" formControlName="gender">
-                        <option selected value="male">Male</option>
-                        <option value="female">Female</option>
-                        <option value="other">Other</option>
-                    </select>
+                <div class="item2_edit">
+                    <input type="text" id="gender" formControlName="gender" placeholder="">
                 </div>
                 
             </div>
 
             <div class="form-group">
-                <div class="item1">
+                <div class="item1_edit">
                     <label for="email">Email</label>
                 </div>
                 
-                <div class="item2">
-                    <input type="text" id="email" formControlName="email" placeholder="Luca@gmail.com">
+                <div class="item2_edit">
+                    <input type="text" id="email" formControlName="email" placeholder="">
                 </div>
             </div>
 
             <div class="form-group">
-                <div class="item1">
+                <div class="item1_edit">
                     <label for="telephone">Telephone</label>
                 </div>
                 
-                <div class="item2">
-                    <input type="text" id="telephone" formControlName="telephone" placeholder="3519040151">
+                <div class="item2_edit">
+                    <input type="text" id="telephone" formControlName="telephone" placeholder="">
                 </div>
             </div>
-        
-            <button type="submit" id="btn_sub">conferma</button>
+            
+            <div class="buttons">
+                <button type="submit" id="btn_sub">conferma</button>
+                <button id="btn_reset" >annulla</button>
+            </div>
+            
         </form>
     </ng-container>
 </div>

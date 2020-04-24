@@ -3,24 +3,40 @@
     display: table;
     color: white;
     margin-top: 50px;
-    text-align: center;
 }
 
-.form-group{
+.info{
     margin: 0 auto;
     display: grid;
     grid-template-columns: 50% 50% ;
     grid-template-rows: 20% 20% 20% 20% 20%;
 }
 
+.form-group{
+    margin: 0 auto;
+    width: 500px;
+    background-color:rgb(2,0,38);
+    background: linear-gradient(90deg, rgba(0, 39, 55, 1)  0%, rgb(56, 117, 163) 100%);;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 50% 50%;
+    grid-column-gap: 7px;
+    border-bottom: 1px white solid;
+    padding-bottom: 7px;
+    margin-bottom: 10px;
+
+}
+
 .form-group input{
     background-color: transparent;
     border: none;
+    color: white;
+    font-size: 15px;
 }
 
 .form-group input::placeholder{
     color: white;
-    font-weight: bold;
+    font-weight: bolder;
 }
 
 p{
@@ -30,12 +46,18 @@ p{
     text-align: center;
 }
 
+#bold_info{
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+}
+
 #user{
     font-weight: bold;
 }
 
 .item1{
-    
     text-align: right;
     padding-right: 20px;
     border-right: 1px white solid;
@@ -51,25 +73,17 @@ p{
     padding-top: 10px;
 }
 
-#btn_sub{
-    width: 80%;
-    margin-top: 25px;
-    margin-bottom: 10px;
-    display: inline-block;
-    border-radius: 25px;
-    border: none;
-    height: 30px;
-    text-align: center;
-    font-size: 15px;
-    font-weight: lighter;
+.item1_edit{
+    padding-left: 15px;
+    padding-top: 10px;
 }
 
-#btn_sub:hover{
-    cursor: pointer;
+.item2_edit{
+    padding-left: 15px;
 }
 
 #btn_edit{
-    width: 80%;
+    width: 50%;
     margin-top: 25px;
     margin-bottom: 10px;
     display: inline-block;
@@ -82,6 +96,46 @@ p{
 }
 
 #btn_edit:hover{
+    cursor: pointer;
+}
+
+.buttons{
+    // border:1px white solid;
+    align-content: center;
+    align-self: center;
+}
+
+#btn_sub{
+    width: 45%;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    margin-left: 20px;
+    display: inline-block;
+    border-radius: 25px;
+    border: none;
+    height: 50px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: lighter;  
+}
+
+#btn_reset{
+    width: 45%;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    // margin-left: 10px;
+    display: inline-block;
+    border-radius: 25px;
+    border: none;
+    height: 50px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: lighter;
+    
+}
+
+.buttons:hover{
     cursor: pointer;
 }
 

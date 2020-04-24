@@ -69,5 +69,4 @@ export class ProfiloComponent implements OnInit {
     this.modifica(this.user);
     this.daModificare=true;
   }
-
 }
