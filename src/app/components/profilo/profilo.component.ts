@@ -15,6 +15,7 @@ export class ProfiloComponent implements OnInit {
   utente : string;
   usersList : UserItem[];
   user : UserItem;
+  daModificare=false;
 
   constructor(private fb : FormBuilder, private listaUsers : LoginService) {
     this.profiloForm=this.fb.group({
@@ -31,7 +32,7 @@ export class ProfiloComponent implements OnInit {
   ngOnInit(): void {
     this.utente=sessionStorage.getItem('user');
     this.showForm(this.utente);
-    this.listaUsers.showLista();
+    
   }
 
   modifica(user:UserItem){
@@ -46,7 +47,7 @@ export class ProfiloComponent implements OnInit {
 
   showForm(username:string){
     this.user=this.listaUsers.getSingolo(String(username));
-    this.modifica(this.user);
+    
   }
 
   onSubmit(form){
@@ -61,6 +62,12 @@ export class ProfiloComponent implements OnInit {
     this.usersList=this.listaUsers.getLista();
     this.listaUsers.showLista();
     window.alert("modifica effettuata");
+    this.daModificare=false;
+  }
+
+  cliccato(){
+    this.modifica(this.user);
+    this.daModificare=true;
   }
 
 }
