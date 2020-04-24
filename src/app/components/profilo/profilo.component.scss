@@ -68,5 +68,22 @@ p{
     cursor: pointer;
 }
 
+#btn_edit{
+    width: 80%;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    display: inline-block;
+    border-radius: 25px;
+    border: none;
+    height: 30px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: lighter;
+}
+
+#btn_edit:hover{
+    cursor: pointer;
+}
+
 
 

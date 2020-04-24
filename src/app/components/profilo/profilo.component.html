@@ -1,65 +1,71 @@
 <div class="profiloForm">
 
-    <p>Benvenuto</p>
-    <p id="user">{{utente}}</p>
     
-
-    <form [formGroup]="profiloForm" (ngSubmit)="onSubmit(profiloForm.value)">
-        <div class="form-group">
-            <div class=item1>
-                <label for="name">Name</label>
-            </div>
-            
-            <div class="item2">
-                <input type="text" id="name" formControlName="name" placeholder="Luca">
-            </div>
-        </div>
-
-        <div class="form-group">
-            <div class="item1">
-                <label for="surname">Surname</label>
-            </div>
-            
-            <div class="item2">
-                <input type="text" id="surname" formControlName="surname" placeholder="Alicata">
-            </div>
-        </div>
-
-        <div class="form-group">
-            <div class=item1>
-                <label for="gender">Gender</label>
-            </div>
-            
-            <div class="item2">
-                <select name="gender" id="gender" formControlName="gender">
-                    <option selected value="male">Male</option>
-                    <option value="female">Female</option>
-                    <option value="other">Other</option>
-                </select>
-            </div>
-            
-        </div>
-
-        <div class="form-group">
-            <div class="item1">
-                <label for="email">Email</label>
-            </div>
-            
-            <div class="item2">
-                <input type="text" id="email" formControlName="email" placeholder="Luca@gmail.com">
-            </div>
-        </div>
-
-        <div class="form-group">
-            <div class="item1">
-                <label for="telephone">Telephone</label>
-            </div>
-            
-            <div class="item2">
-                <input type="text" id="telephone" formControlName="telephone" placeholder="3519040151">
-            </div>
-        </div>
+    <p>Benvenuto {{utente}}</p>
+    <p>{{user.name}}</p>
+    <p>{{user.surname}}</p>
+    <p>{{user.email}}</p>
+    <p>{{user.telephone}}</p>
+    <button (click)="cliccato()" id="btn_edit">Modifica</button>
     
-        <button type="submit" id="btn_sub">conferma</button>
-    </form>
+    <ng-container *ngIf="daModificare">
+        <form [formGroup]="profiloForm" (ngSubmit)="onSubmit(profiloForm.value)">
+            <div class="form-group">
+                <div class=item1>
+                    <label for="name">Name</label>
+                </div>
+                
+                <div class="item2">
+                    <input type="text" id="name" formControlName="name" placeholder="Luca">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="item1">
+                    <label for="surname">Surname</label>
+                </div>
+                
+                <div class="item2">
+                    <input type="text" id="surname" formControlName="surname" placeholder="Alicata">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class=item1>
+                    <label for="gender">Gender</label>
+                </div>
+                
+                <div class="item2">
+                    <select name="gender" id="gender" formControlName="gender">
+                        <option selected value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                
+            </div>
+
+            <div class="form-group">
+                <div class="item1">
+                    <label for="email">Email</label>
+                </div>
+                
+                <div class="item2">
+                    <input type="text" id="email" formControlName="email" placeholder="Luca@gmail.com">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="item1">
+                    <label for="telephone">Telephone</label>
+                </div>
+                
+                <div class="item2">
+                    <input type="text" id="telephone" formControlName="telephone" placeholder="3519040151">
+                </div>
+            </div>
+        
+            <button type="submit" id="btn_sub">conferma</button>
+        </form>
+    </ng-container>
 </div>
