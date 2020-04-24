@@ -9,20 +9,21 @@ import { ListaComponent } from './lista/lista/lista.component';
 import { ProfiloComponent } from './components/profilo/profilo.component';
 import { DettaglioComponent } from './components/dettaglio/dettaglio.component';
 import { FeedbackComponent } from './components/feedback/feedback.component';
-
+import { CardsComponent } from './components/cards/cards.component';
 
 //questi sono i routes base man mano che create le cose e vi servono scommentate queste qua sotto e modificatele a piacimento
 const routes: Routes = [
-  { path: 'login', component: LoginComponent },
-  { path: 'home', component: HomeComponent },
-// { path: 'funzionalita', component: FunzionalitaComponent, canActivate: [GuardService]},
-  { path: 'feedback', component: FeedbackComponent},
-  { path: 'lista', component: ListaComponent},
-  { path: 'dettaglio/:id', component: DettaglioComponent},
-  { path: 'profilo', component: ProfiloComponent, canActivate: [GuardService]},
-  { path: 'registrati', component:RegistrazioneComponent, canActivate: [EditGuardService]},
-  { path: '', redirectTo: '/login', pathMatch: 'full' },
-//  { path: '**', component: PageNotFoundComponent }
+    { path: 'login', component: LoginComponent },
+    { path: 'home', component: HomeComponent },
+  // { path: 'funzionalita', component: FunzionalitaComponent, canActivate: [GuardService]},
+    { path: 'cards', component: CardsComponent},
+    { path: 'feedback', component: FeedbackComponent},
+    { path: 'lista', component: ListaComponent},
+    { path: 'dettaglio/:id', component: DettaglioComponent},
+    { path: 'profilo', component: ProfiloComponent, canActivate: [GuardService]},
+    { path: 'registrati', component:RegistrazioneComponent, canActivate: [EditGuardService]},
+    { path: '', redirectTo: '/login', pathMatch: 'full' },
+ //  { path: '**', component: PageNotFoundComponent }
 ];
 
 @NgModule({

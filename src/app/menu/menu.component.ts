@@ -12,7 +12,7 @@ export class MenuComponent implements OnInit {
   menuList: MenuItem[] = [
     {id: 1, description: 'Home', url:"/home"},
     {id: 2, description: 'Lista', url:"/lista"},
-    {id: 3, description: 'Cards', url:"/Cards"},
+    {id: 3, description: 'Cards', url:"/cards"},
     {id: 4, description: 'login', url:"/login"},
   ];
    

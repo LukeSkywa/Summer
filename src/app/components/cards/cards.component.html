@@ -1,0 +1,70 @@
+<!--<mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark indigo">
+        <mdb-navbar-brand>
+            <a  class="navbar-brand">Navbar</a>
+
+        </mdb-navbar-brand>
+        <links>
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link waves-light" mdbWavesEffect>Homepage </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link waves-light" mdbWavesEffect>Cards </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link waves-light" mdbWavesEffect>Cards </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link waves-light" mdbWavesEffect>Feedback </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link waves-light" mdbWavesEffect>Profilo </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link waves-light" mdbWavesEffect>Esci </a>
+                </li>
+            </ul>
+        </links>
+    </mdb-navbar>
+-->
+
+<select #filtro>
+    <option value="all">Tutto</option>
+    <option value="pref">preferiti</option>
+    <option value="nasc">nascosti</option>
+</select>
+
+<button (click)="filtra(filtro.value)">Filtra</button>
+
+<ul>
+    <li>
+        <div  *ngFor="let item of cards" >
+            <ng-container *ngIf="item.nascosto === false || filtro.value === 'nasc'">
+                <p>{{item.nome}}</p>
+                <p>{{item.autore}}, {{item.Rating}}</p>
+                <!--bottoni per le varie opzioni-->
+                <button (click)="addPreferiti(item.id,filtro.value)">PREFERITI</button>
+                <button  *ngIf="item.nascosto === false" (click)="nascondi(item.id,filtro.value)">NASCONDI</button>
+                <button  *ngIf="item.nascosto === true"(click)="nascondi(item.id,filtro.value)">MOSTRA</button>
+                <button (click)="apriD(item.id)">Dettaglio</button>
+                <ng-container *ngIf="item.preferito === true">
+                    <p appHighlight>☆</p>
+                </ng-container>
+            </ng-container>
+        </div>
+    </li>
+</ul>
+<mat-card class="base">
+    <mat-card-header>
+      <mat-card-title>Titolo canzone</mat-card-title>
+      <mat-card-subtitle>Autore</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="../../../assets/std.jpg" alt="NAN">
+    <mat-card-content>
+       descrizione veloce
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button>LIKE</button>
+      <button mat-button>SHARE</button>
+    </mat-card-actions>
+  </mat-card>
