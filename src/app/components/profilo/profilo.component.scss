@@ -1,4 +1,72 @@
 .profiloForm{
     margin: 0 auto;
     display: table;
+    color: white;
+    margin-top: 50px;
+    text-align: center;
 }
+
+.form-group{
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 50% 50% ;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+}
+
+.form-group input{
+    background-color: transparent;
+    border: none;
+}
+
+.form-group input::placeholder{
+    color: white;
+    font-weight: bold;
+}
+
+p{
+    font-size: 25px;
+    font-weight: lighter;
+    color: white;
+    text-align: center;
+}
+
+#user{
+    font-weight: bold;
+}
+
+.item1{
+    
+    text-align: right;
+    padding-right: 20px;
+    border-right: 1px white solid;
+    padding-bottom: 25px;
+    padding-top: 10px;
+}
+
+.item2{
+    
+    padding-left: 20px;
+    border-left: 1px white solid;
+    padding-bottom: 25px;
+    padding-top: 10px;
+}
+
+#btn_sub{
+    width: 80%;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    display: inline-block;
+    border-radius: 25px;
+    border: none;
+    height: 30px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: lighter;
+}
+
+#btn_sub:hover{
+    cursor: pointer;
+}
+
+
+
