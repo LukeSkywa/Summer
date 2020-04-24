@@ -18,6 +18,7 @@ import {MatCardModule} from '@angular/material/card';
 import { CardsComponent } from './components/cards/cards.component';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import { MyHttpService } from './services/myhttp.service';
+import { ImageUploadComponent } from './components/imageupload/imageupload.component';
 
 
 
@@ -34,7 +35,8 @@ import { MyHttpService } from './services/myhttp.service';
     HighlightDirective,
     DettaglioComponent,
     FeedbackComponent,
-    CardsComponent
+    CardsComponent,
+    ImageUploadComponent
   ],
   imports: [
     BrowserModule,
