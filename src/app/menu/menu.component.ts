@@ -1,5 +1,6 @@
 import { Component, OnInit} from '@angular/core';
 import { MenuItem } from 'src/app/models/menu-item.interface';
+import { Router, NavigationEnd } from '@angular/router';
 
 
 @Component({
@@ -16,10 +17,26 @@ export class MenuComponent implements OnInit {
     {id: 4, description: 'login', url:"/login"},
     {id: 4, description: 'profilo', url:"/profilo"},
   ];
+  ricerca=false;
    
-  constructor() { }
+  constructor(router:Router) {​
+
+    router.events.subscribe(event => {​
+  
+      if(event instanceof NavigationEnd) {​
+        console.log(event);
+        if(event.urlAfterRedirects==="/cards"||event.urlAfterRedirects==="/lista"){
+          this.ricerca=true;
+        }
+        else this.ricerca=false;
+      }​
+  
+  });​
+}
 
   ngOnInit(): void {
+    
+
   }
 
 }
