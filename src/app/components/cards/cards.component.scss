@@ -1,3 +1,38 @@
 .base{
-    max-width: 400px;
+    max-width: fit-content;
+    background-color: rgba($color: white, $alpha: 0.75);
+    float: left;
+    margin: 25px;
+}
+
+.grid-container {
+    display: grid;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 390px;
+}
+  
+.grid-item {
+    text-align: center;
+}
+ 
+.item1 {
+    grid-column: 1 / span 3;
+    grid-row: 1;
+}
+  
+.item2 {
+    grid-column: 1;
+    grid-row: 1 / span 1;
+    visibility: hidden;
+}
+  
+.item3 {
+    grid-column: 3 / span 1;
+    grid-row: 1;
+    visibility: hidden;
+}
+
+.grid-container:hover button{
+    visibility: visible;
 }

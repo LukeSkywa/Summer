@@ -36,35 +36,26 @@
 
 <button (click)="filtra(filtro.value)">Filtra</button>
 
-<ul>
-    <li>
-        <div  *ngFor="let item of cards" >
-            <ng-container *ngIf="item.nascosto === false || filtro.value === 'nasc'">
-                <p>{{item.nome}}</p>
-                <p>{{item.autore}}, {{item.Rating}}</p>
-                <!--bottoni per le varie opzioni-->
+<div  *ngFor="let item of cards" >
+    <ng-container *ngIf="item.nascosto === false || filtro.value === 'nasc'">
+        <mat-card class="base">
+            <div class="grid-container">
+                <div class="grid-item item1"><img mat-card-image src="assets/img/std.jpg" alt="None"></div>
+                <div class="grid-item item2"><button mat-button>LIKE</button></div>
+                <div class="grid-item item3"><button mat-button><img src="assets/img/share.png" alt="None"></button></div>  
+            </div>
+            <mat-card-title>{{item.nome}}</mat-card-title>
+            <mat-card-subtitle>{{item.autore}}</mat-card-subtitle>  
+            <mat-card-content>
+                Rate: {{item.Rating}}   <br>
                 <button (click)="addPreferiti(item.id,filtro.value)">PREFERITI</button>
                 <button  *ngIf="item.nascosto === false" (click)="nascondi(item.id,filtro.value)">NASCONDI</button>
                 <button  *ngIf="item.nascosto === true"(click)="nascondi(item.id,filtro.value)">MOSTRA</button>
                 <button (click)="apriD(item.id)">Dettaglio</button>
                 <ng-container *ngIf="item.preferito === true">
-                    <p appHighlight>☆</p>
+                    <span appHighlight>☆</span>
                 </ng-container>
-            </ng-container>
-        </div>
-    </li>
-</ul>
-<mat-card class="base">
-    <mat-card-header>
-      <mat-card-title>Titolo canzone</mat-card-title>
-      <mat-card-subtitle>Autore</mat-card-subtitle>
-    </mat-card-header>
-    <img mat-card-image src="../../../assets/std.jpg" alt="NAN">
-    <mat-card-content>
-       descrizione veloce
-    </mat-card-content>
-    <mat-card-actions>
-      <button mat-button>LIKE</button>
-      <button mat-button>SHARE</button>
-    </mat-card-actions>
-  </mat-card>
+            </mat-card-content>    
+        </mat-card>
+    </ng-container>
+</div>
