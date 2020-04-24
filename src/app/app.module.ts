@@ -7,6 +7,7 @@ import { RegistrazioneComponent } from './components/registrazione/registrazione
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HomeComponent } from './home/home.component';
 import { MenuComponent } from './menu/menu.component';
+import { ProfiloComponent } from './components/profilo/profilo.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ListaComponent } from './lista/lista/lista.component';
 import { HighlightDirective } from './directives/highlight-directive.service';
@@ -15,6 +16,9 @@ import { FeedbackComponent } from './components/feedback/feedback.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatCardModule} from '@angular/material/card';
 import { CardsComponent } from './components/cards/cards.component';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+import { MyHttpService } from './services/myhttp.service';
+
 
 
 @NgModule({
@@ -24,6 +28,7 @@ import { CardsComponent } from './components/cards/cards.component';
     RegistrazioneComponent,
     HomeComponent,
     MenuComponent,
+    ProfiloComponent,
     ListaComponent,
     HighlightDirective,
     DettaglioComponent,
@@ -37,8 +42,8 @@ import { CardsComponent } from './components/cards/cards.component';
     HttpClientModule,
     FormsModule,
     BrowserAnimationsModule,
-    MatCardModule
-    
+    MatCardModule,
+    MatSlideToggleModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,11 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { ListaComponent } from './lista/lista/lista.component';
 import { LoginComponent } from './components/login/login.component';
 import { EditGuardService } from './services/guards/edit-guard.service';
 import { GuardService } from './services/guards/guard.service';
 import { RegistrazioneComponent } from './components/registrazione/registrazione.component';
 import { HomeComponent } from './home/home.component';
+import { ListaComponent } from './lista/lista/lista.component';
+import { ProfiloComponent } from './components/profilo/profilo.component';
 import { DettaglioComponent } from './components/dettaglio/dettaglio.component';
 import { FeedbackComponent } from './components/feedback/feedback.component';
 import { CardsComponent } from './components/cards/cards.component';
@@ -19,6 +20,7 @@ const routes: Routes = [
     { path: 'feedback', component: FeedbackComponent},
     { path: 'lista', component: ListaComponent},
     { path: 'dettaglio/:id', component: DettaglioComponent},
+    { path: 'profilo', component: ProfiloComponent, canActivate: [GuardService]},
     { path: 'registrati', component:RegistrazioneComponent, canActivate: [EditGuardService]},
     { path: '', redirectTo: '/login', pathMatch: 'full' },
  //  { path: '**', component: PageNotFoundComponent }
