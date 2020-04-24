@@ -8,7 +8,7 @@ import { UserItem } from 'src/app/models/user-item.interface';
 export class LoginService {
 
   usersList : UserItem[] = [
-    {username: "louis" , password : "gigino1999", name: "", surname: "", gender: "", email: "", telephone: ""}
+    {username: "louis" , password : "gigino1999", name: "louis", surname: "guiniot", gender: "male", email: "louis.guiniot@gmail.com", telephone: "3519040151"}
   ]
 
   constructor(private router: Router) { }
