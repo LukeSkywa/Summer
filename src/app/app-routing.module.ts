@@ -13,16 +13,16 @@ import { FeedbackComponent } from './components/feedback/feedback.component';
 
 //questi sono i routes base man mano che create le cose e vi servono scommentate queste qua sotto e modificatele a piacimento
 const routes: Routes = [
-    { path: 'login', component: LoginComponent },
-    { path: 'home', component: HomeComponent, canActivate: [GuardService] },
-  // { path: 'funzionalita', component: FunzionalitaComponent, canActivate: [GuardService]},
- //  { path: 'crealista', component: CrealistaComponent, canActivate: [MyRouteGuardService]},
-     { path: 'lista', component: ListaComponent, canActivate: [GuardService]},
- //  { path: 'dettaglio/:id', component: DettaglioComponent, canActivate: [MyRouteGuardService]},
-     { path: 'registrati', component: RegistrazioneComponent},
-     { path: 'profilo', component: ProfiloComponent, canActivate: [GuardService]},
-     { path: '', redirectTo: '/login', pathMatch: 'full' },
- //  { path: '**', component: PageNotFoundComponent }
+  { path: 'login', component: LoginComponent },
+  { path: 'home', component: HomeComponent },
+// { path: 'funzionalita', component: FunzionalitaComponent, canActivate: [GuardService]},
+  { path: 'feedback', component: FeedbackComponent},
+  { path: 'lista', component: ListaComponent},
+  { path: 'dettaglio/:id', component: DettaglioComponent},
+  { path: 'profilo', component: ProfiloComponent, canActivate: [GuardService]},
+  { path: 'registrati', component:RegistrazioneComponent, canActivate: [EditGuardService]},
+  { path: '', redirectTo: '/login', pathMatch: 'full' },
+//  { path: '**', component: PageNotFoundComponent }
 ];
 
 @NgModule({
