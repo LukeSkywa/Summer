@@ -4,10 +4,10 @@
     <p>Benvenuto {{utente}}</p>
     
 
-    <form [formGroup]="profiloForm">
+    <form [formGroup]="profiloForm" (ngSubmit)="onSubmit(profiloForm.value)">
     <div class="form-group">
         <label for="name">Name</label><br>
-        <input type="text" id="name" formControlName="name" placeholder="Luca">
+        <input type="text" id="name" formControlName="name" placeholder="{{user.name}}">
     </div>
     <div class="form-group">
         <label for="password">Surname</label><br>
@@ -31,7 +31,7 @@
     </div>
 
     <br>
-    <button type="submit" id="btnSub">annulla</button>
     <button type="submit" id="btnSub">conferma</button>
+    <button type="reset" id="btnSub">annulla</button>
 </form>
 </div>

@@ -3,7 +3,7 @@ export interface UserItem{
     password : string,
     name ? : string,
     surname ? : string,
-    gender ? : Selection
+    gender ? : string
     email ? : string,
     telephone ? : string
 }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { UserItem } from 'src/app/models/user-item.interface';
 import { LoginService } from 'src/app/services/login/login.service';
 
 @Component({
@@ -11,8 +12,10 @@ export class ProfiloComponent implements OnInit {
 
   profiloForm : FormGroup;
   utente : string;
+  usersList : UserItem[];
+  user : UserItem;
 
-  constructor(private fb : FormBuilder, private loginService : LoginService) {
+  constructor(private fb : FormBuilder, private listaUsers : LoginService) {
     this.profiloForm=this.fb.group({
       name : ["", Validators.required],
       surname : ["", Validators.required],
@@ -27,8 +30,25 @@ export class ProfiloComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  updateInfo(){
-    
+  modifica(user:UserItem){
+    this.profiloForm = this.fb.group({
+      name : user.name,
+      surname : user.surname,
+      gender : user.gender,
+      email : user.email,
+      telephone : user.telephone
+    })
+  }
+
+  showForm(username:string){
+    this.user=this.listaUsers.getSingolo(String(username));
+    this.modifica(this.user);
+  }
+
+  onSubmit(form){
+    this.listaUsers.modificaDati(form);
+    this.usersList=this.listaUsers.getLista();
+    window.alert("modifica effettuata");
   }
 
 }

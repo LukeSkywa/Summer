@@ -8,12 +8,32 @@ import { UserItem } from 'src/app/models/user-item.interface';
 export class LoginService {
 
   usersList : UserItem[] = [
-    {username: "louis" , password : "gigino"}
-    //name: "", surname: "", gender: "", email: "", telephone: ""}
+    {username: "louis" , password : "gigino1999", name: "", surname: "", gender: "", email: "", telephone: ""}
   ]
 
   constructor(private router: Router) { }
 
+  getLista():UserItem[]{
+    return this.usersList;
+  }
+
+  getSingolo(username:string){
+    return this.usersList.find(item=>{
+      return item.username === username;
+    })
+  }
+
+  modificaDati(user){
+    this.usersList.forEach(element => {
+      if(element.username === user.username){
+        element.name = user.name;
+        element.surname = user.surname;
+        element.gender = user.gender;
+        element.email = user.email;
+        element.telephone = user.telephone;
+      }
+    })
+  }
 
   autenticazione(username : string, password : string){
     let response = false;
