@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegistrazioneComponent } from './components/registrazione/registrazione.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
-import { HomeComponent } from './home/home.component';
+import { HomeComponent } from './components/home/home.component';
 import { MenuComponent } from './menu/menu.component';
 import { ProfiloComponent } from './components/profilo/profilo.component';
 import { HttpClientModule } from '@angular/common/http';
@@ -18,6 +18,7 @@ import {MatCardModule} from '@angular/material/card';
 import { CardsComponent } from './components/cards/cards.component';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import { MyHttpService } from './services/myhttp.service';
+import { ImageUploadComponent } from './components/imageupload/imageupload.component';
 
 
 
@@ -34,7 +35,8 @@ import { MyHttpService } from './services/myhttp.service';
     HighlightDirective,
     DettaglioComponent,
     FeedbackComponent,
-    CardsComponent
+    CardsComponent,
+    ImageUploadComponent
   ],
   imports: [
     BrowserModule,
