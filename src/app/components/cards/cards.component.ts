@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
 })
 export class CardsComponent implements OnInit {
   cards=[];
+  filtroValue : string;
   constructor(private myHttpService: MyHttpService,private router: Router) { }
 
 //riempi la cards da db
@@ -47,6 +48,7 @@ export class CardsComponent implements OnInit {
   }
   //metodo che da filtra al cambio di select
   filtra(value:string){
+    this.filtroValue = value;
     if(value==="all") this.riempi();
     else this.retrieveFilter(value);
   }

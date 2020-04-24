@@ -8,5 +8,6 @@ export interface ListItem{
     annouscita:Date;
     nascosto:boolean;
     preferito:boolean;
+    immagine:string;
 
 }

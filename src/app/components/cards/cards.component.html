@@ -28,29 +28,26 @@
     </mdb-navbar>
 -->
 
-<select #filtro>
-    <option value="all">Tutto</option>
-    <option value="pref">preferiti</option>
-    <option value="nasc">nascosti</option>
-</select>
+<button  (click)="filtra('all')">Tutti</button>
+<button  (click)="filtra('pref')">Preferiti</button>
+<button  (click)="filtra('nasc')">Nascosti</button>
 
-<button (click)="filtra(filtro.value)">Filtra</button>
 
 <div  *ngFor="let item of cards" >
-    <ng-container *ngIf="item.nascosto === false || filtro.value === 'nasc'">
+    <ng-container *ngIf="!item.nascosto || filtroValue === 'nasc'">
         <mat-card class="base">
             <div class="grid-container">
-                <div class="grid-item item1"><img mat-card-image src="assets/img/std.jpg" alt="None"></div>
-                <div class="grid-item item2"><button mat-button>LIKE</button></div>
+                <div class="grid-item item1"><img mat-card-image src="{{item.immagine}}" alt="None"></div>
+                <div class="grid-item item2"><button mat-button><img src="assets/img/like.png" alt="None"></button></div>
                 <div class="grid-item item3"><button mat-button><img src="assets/img/share.png" alt="None"></button></div>  
             </div>
             <mat-card-title>{{item.nome}}</mat-card-title>
             <mat-card-subtitle>{{item.autore}}</mat-card-subtitle>  
             <mat-card-content>
                 Rate: {{item.Rating}}   <br>
-                <button (click)="addPreferiti(item.id,filtro.value)">PREFERITI</button>
-                <button  *ngIf="item.nascosto === false" (click)="nascondi(item.id,filtro.value)">NASCONDI</button>
-                <button  *ngIf="item.nascosto === true"(click)="nascondi(item.id,filtro.value)">MOSTRA</button>
+                <button (click)="addPreferiti(item.id,filtroValue)">PREFERITI</button>
+                <button  *ngIf="item.nascosto === false" (click)="nascondi(item.id,filtroValue)">NASCONDI</button>
+                <button  *ngIf="item.nascosto === true"(click)="nascondi(item.id,filtroValue)">MOSTRA</button>
                 <button (click)="apriD(item.id)">Dettaglio</button>
                 <ng-container *ngIf="item.preferito === true">
                     <span appHighlight>☆</span>
