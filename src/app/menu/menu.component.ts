@@ -14,6 +14,7 @@ export class MenuComponent implements OnInit {
     {id: 2, description: 'Lista', url:"/lista"},
     {id: 3, description: 'Cards', url:"/cards"},
     {id: 4, description: 'login', url:"/login"},
+    {id: 4, description: 'profilo', url:"/profilo"},
   ];
    
   constructor() { }
