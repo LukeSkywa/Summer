@@ -1,6 +1,7 @@
 import { Component, OnInit} from '@angular/core';
 import { MenuItem } from 'src/app/models/menu-item.interface';
 import { Router, NavigationEnd } from '@angular/router';
+import { ComunicazioneService } from '../services/comunicazione.service';
 
 
 @Component({
@@ -19,12 +20,11 @@ export class MenuComponent implements OnInit {
   ];
   ricerca=false;
    
-  constructor(router:Router) {​
+  constructor(router:Router,private comunicazioneService: ComunicazioneService) {​
 
     router.events.subscribe(event => {​
   
       if(event instanceof NavigationEnd) {​
-        console.log(event);
         if(event.urlAfterRedirects==="/cards"||event.urlAfterRedirects==="/lista"){
           this.ricerca=true;
         }
@@ -37,6 +37,9 @@ export class MenuComponent implements OnInit {
   ngOnInit(): void {
     
 
+  }
+  cerca(mess){
+    this.comunicazioneService.pubblicaNuovoMessaggio(mess);
   }
 
 }

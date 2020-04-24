@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { MyHttpService } from 'src/app/services/myhttp.service';
 import { Router } from '@angular/router';
+import { ComunicazioneService } from 'src/app/services/comunicazione.service';
+
 
 @Component({
   selector: 'app-lista',
@@ -9,7 +11,12 @@ import { Router } from '@angular/router';
 })
 export class ListaComponent implements OnInit {
   lista=[];
-  constructor(private myHttpService: MyHttpService,private router: Router) { }
+
+  constructor(private myHttpService: MyHttpService,private router: Router,private comunicazioneService: ComunicazioneService) {
+    this.comunicazioneService.messaggio$.subscribe(value=>{
+      this.cercaInHttp(value);
+    }); 
+   }
 
 //riempi la lista da db
   riempi(){
@@ -43,8 +50,15 @@ export class ListaComponent implements OnInit {
     }, err => {
      
     });
-    
   }
+  //metodo per cercare
+  cercaInHttp(id){
+    this.myHttpService.getSingolo(id).subscribe(response =>{
+      this.lista=[];
+      this.lista.push(response);
+    })
+  }
+
   //metodo che da filtra al cambio di select
   filtra(value:string){
     if(value==="all") this.riempi();
@@ -72,6 +86,10 @@ export class ListaComponent implements OnInit {
   }
   apriD(id:number){
     this.router.navigate(['/dettaglio',id]);
+  }
+  //barra di ricerca
+  cerca(nome){
+    
   }
   ngOnInit(): void {
     this.riempi();
