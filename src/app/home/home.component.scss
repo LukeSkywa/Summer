@@ -3,11 +3,37 @@
         list-style-type: none;
         margin: 0;
         padding: 0;
+        margin-left: 5px;
+      }
+
+      h1 {
+        font-size: 100px;
+        display: inline;
+        color: white;
+        margin: 4;
+        padding: 4;
+        margin-left: 5px;
+      }
+
+      p {
+        display: inline;
+        color: white;
+        margin: 4;
+        padding: 4;
+        font-size: 30px;
+        margin-left: 5px;
       }
       
       li {
         display: inline;
-        color: red;
+        color: white;
+        margin: 4;
+        padding: 4;
+        font-size: 30px;
+        
+      }
+
+      img {
       }
       
   }
