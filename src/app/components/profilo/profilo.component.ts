@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { UserItem } from 'src/app/models/user-item.interface';
 import { LoginService } from 'src/app/services/login/login.service';
 
+
 @Component({
   selector: 'app-profilo',
   templateUrl: './profilo.component.html',
@@ -24,10 +25,13 @@ export class ProfiloComponent implements OnInit {
       telephone : ["", Validators.required]
     })
 
-    this.utente=sessionStorage.getItem('user');
+    
    }
 
   ngOnInit(): void {
+    this.utente=sessionStorage.getItem('user');
+    this.showForm(this.utente);
+    this.listaUsers.showLista();
   }
 
   modifica(user:UserItem){
@@ -46,8 +50,16 @@ export class ProfiloComponent implements OnInit {
   }
 
   onSubmit(form){
-    this.listaUsers.modificaDati(form);
+    
+    this.user.name=form.name;
+    this.user.email=form.email;
+    this.user.surname=form.surname;
+    this.user.gender=form.gender;
+    this.user.telephone=form.telephone;
+
+    this.listaUsers.modificaDati(this.user);
     this.usersList=this.listaUsers.getLista();
+    this.listaUsers.showLista();
     window.alert("modifica effettuata");
   }
 
