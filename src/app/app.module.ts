@@ -8,10 +8,15 @@ import { RegistrazioneComponent } from './components/registrazione/registrazione
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HomeComponent } from './home/home.component';
 import { MenuComponent } from './menu/menu.component';
+import { ProfiloComponent } from './components/profilo/profilo.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ListaComponent } from './lista/lista/lista.component';
 import { HighlightDirective } from './directives/highlight-directive.service';
 import { DettaglioComponent } from './components/dettaglio/dettaglio.component';
+import { FeedbackComponent } from './components/feedback/feedback.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+import { MyHttpService } from './services/myhttp.service';
 
 
 
@@ -22,9 +27,11 @@ import { DettaglioComponent } from './components/dettaglio/dettaglio.component';
     RegistrazioneComponent,
     HomeComponent,
     MenuComponent,
+    ProfiloComponent,
     ListaComponent,
     HighlightDirective,
-    DettaglioComponent
+    DettaglioComponent,
+    FeedbackComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +39,8 @@ import { DettaglioComponent } from './components/dettaglio/dettaglio.component';
     ReactiveFormsModule,
     HttpClientModule,
     FormsModule,
-    
+    BrowserAnimationsModule,
+    MatSlideToggleModule
   ],
   providers: [],
   bootstrap: [AppComponent]

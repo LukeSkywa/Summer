@@ -16,10 +16,12 @@
   }
   
   body{    
-    background-color:rgb(2,0,38);
-    background: linear-gradient(90deg, rgba(2,0,38,1) 0%, rgba(41,80,99,1) 48%, rgba(48,127,176,1) 100%);;
+    // background-color:rgb(2,0,38);
+    // background: linear-gradient(90deg, rgba(2,0,38,1) 0%, rgba(41,80,99,1) 48%, rgba(48,127,176,1) 100%);;
     padding-left: 10px;
     padding-top: 20px;
     padding-right: 10px;
     font-family: 'Alef';
 }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
