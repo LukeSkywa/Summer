@@ -83,4 +83,10 @@ export class LoginService {
     window.alert("logout effettuato, arrivederci");
     this.router.navigateByUrl('/login');
   }
+  showLista(){
+    this.usersList.forEach(element => {
+      console.log(element);
+      
+    });
+  }
 }

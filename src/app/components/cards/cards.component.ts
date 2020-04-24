@@ -1,36 +1,29 @@
 import { Component, OnInit } from '@angular/core';
 import { MyHttpService } from 'src/app/services/myhttp.service';
 import { Router } from '@angular/router';
-import { ComunicazioneService } from 'src/app/services/comunicazione.service';
-
 
 @Component({
-  selector: 'app-lista',
-  templateUrl: './lista.component.html',
-  styleUrls: ['./lista.component.scss']
+  selector: 'app-cards',
+  templateUrl: './cards.component.html',
+  styleUrls: ['./cards.component.scss']
 })
-export class ListaComponent implements OnInit {
-  lista=[];
+export class CardsComponent implements OnInit {
+  cards=[];
+  constructor(private myHttpService: MyHttpService,private router: Router) { }
 
-  constructor(private myHttpService: MyHttpService,private router: Router,private comunicazioneService: ComunicazioneService) {
-    this.comunicazioneService.messaggio$.subscribe(value=>{
-      this.cercaInHttp(value);
-    }); 
-   }
-
-//riempi la lista da db
+//riempi la cards da db
   riempi(){
     this.myHttpService.getCanzoni().subscribe(reponse => {
-      this.lista = reponse;
-      console.log(this.lista);
+      this.cards = reponse;
+      console.log(this.cards);
     }, err => {
       console.log('error');
     });
   }
-  //riempi lista filtrata
+  //riempi cards filtrata
   retrieveFilter(value){
     this.myHttpService.getFiltra(value).subscribe(reponse => {
-      this.lista = reponse.body;
+      this.cards = reponse.body;
     }, err => {
       console.log('error');
     });
@@ -50,15 +43,8 @@ export class ListaComponent implements OnInit {
     }, err => {
      
     });
+    
   }
-  //metodo per cercare
-  cercaInHttp(id){
-    this.myHttpService.getSingolo(id).subscribe(response =>{
-      this.lista=[];
-      this.lista.push(response);
-    })
-  }
-
   //metodo che da filtra al cambio di select
   filtra(value:string){
     if(value==="all") this.riempi();
@@ -86,10 +72,6 @@ export class ListaComponent implements OnInit {
   }
   apriD(id:number){
     this.router.navigate(['/dettaglio',id]);
-  }
-  //barra di ricerca
-  cerca(nome){
-    
   }
   ngOnInit(): void {
     this.riempi();

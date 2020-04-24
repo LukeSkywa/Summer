@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
@@ -14,9 +13,12 @@ import { ListaComponent } from './lista/lista/lista.component';
 import { HighlightDirective } from './directives/highlight-directive.service';
 import { DettaglioComponent } from './components/dettaglio/dettaglio.component';
 import { FeedbackComponent } from './components/feedback/feedback.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MatCardModule} from '@angular/material/card';
+import { CardsComponent } from './components/cards/cards.component';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import { MyHttpService } from './services/myhttp.service';
+
 
 
 
@@ -31,7 +33,8 @@ import { MyHttpService } from './services/myhttp.service';
     ListaComponent,
     HighlightDirective,
     DettaglioComponent,
-    FeedbackComponent
+    FeedbackComponent,
+    CardsComponent
   ],
   imports: [
     BrowserModule,
@@ -40,6 +43,7 @@ import { MyHttpService } from './services/myhttp.service';
     HttpClientModule,
     FormsModule,
     BrowserAnimationsModule,
+    MatCardModule,
     MatSlideToggleModule
   ],
   providers: [],
