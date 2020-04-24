@@ -1,28 +1,40 @@
+
 <div class="back">
     <div class="div_login">
         <img src="logo.jpg" alt="logo">
         <button type="button" id="btn_singup" routerLinkActive="active" routerLink="/registrati">+</button>
         <p>Accedi</p>
-        <form [formGroup]="loginForm" (ngSubmit)="login();" >
-        <div class="form-group">
-            <label for="username" id="lbl">Nome utente
-            <span class="material-icons" id="span_left">
-                person 
-            </span>
-            <input type="text" id="username" formControlName="username" placeholder="Mario.Rossi">
-        </label>
-        </div>
-        <div class="form-group">
-            <label class="mdc-text-field mdc-text-field--outlined mdc-text-field--no-label" for="password" id="lbl">Password</label>
-            <span class="material-icons" id="span_left">
-                enhanced_encryption
-                </span>
-            <input class="mdc-text-field__input" [type]="passwordType" id="password" formControlName="password" placeholder="qwerty">
-            <span class="material-icons" (click)="togglePassword()">
-                visibility_off
-            </span>
-        </div>
-        <button type="submit" id="btn_sub">Accedi</button>
-    </form>
+        
+        <form [formGroup]="loginForm" (ngSubmit)="login();">
+            <div class="grid_div">
+                <div class="form-group">
+                    <label for="username" id="lbl">Nome utente
+                        <div class="fist_section">
+                                <span class="material-icons">
+                                    person 
+                                </span>
+                                <input type="text" id="username" formControlName="username" placeholder="Mario.Rossi">
+                                <p *ngIf="usernameControl.status === 'INVALID' && usernameControl.dirty" id="error">Campo nome obbligatorio</p>
+                        </div>
+                    </label>
+                </div>
+
+                <div class="form-group">
+                    <div class="second_section">
+                            <label for="password" id="lbl">Password
+                                <span class="material-icons" id="span_left">
+                                enhanced_encryption
+                                </span>
+                                <input [type]="passwordType" id="password" formControlName="password" placeholder="qwerty">
+                                <span class="material-icons" (click)="togglePassword()" id="span_right">
+                                    visibility_off
+                                </span>
+                            </label>
+                    </div>
+                </div>
+
+                <button type="submit" id="btn_sub">Accedi</button>
+            </div>
+        </form>
     </div>
 </div>

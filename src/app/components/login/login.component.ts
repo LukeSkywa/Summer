@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, Validators} from '@angular/forms';
+import { FormGroup, FormBuilder, Validators, FormControl} from '@angular/forms';
 import { LoginService } from 'src/app/services/login/login.service';
 
 @Component({
@@ -17,7 +17,7 @@ export class LoginComponent implements OnInit {
   constructor(private fb : FormBuilder, private loginService : LoginService) {
     this.loginForm=this.fb.group({
       username : ["", Validators.required],
-      password : ["", Validators.required]
+      password : ["", Validators.compose([Validators.required, Validators.minLength(7)])]
     })
   }
 
@@ -33,6 +33,16 @@ export class LoginComponent implements OnInit {
       this.passwordType='text';
     }
   }
+
+  get usernameControl():FormControl{
+    return this.loginForm.get('username') as FormControl;
+  }
+
+  get passwordControl():FormControl{
+    return this.loginForm.get('password') as FormControl;
+  }
+
+
 
   getUsername(){
     return this.loginForm.get('username');
