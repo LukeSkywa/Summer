@@ -1,7 +1,7 @@
 
 <div class="back">
     <div class="div_login">
-        <img src="logo.jpg" alt="logo">
+        <img src="img/logo.png.PNG" alt="logo">
         <button type="button" id="btn_singup" routerLinkActive="active" routerLink="/registrati">+</button>
         <p>Accedi</p>
         
@@ -32,21 +32,15 @@
                             </label>
                     </div>
                 </div>
-
-                <button type="submit" id="btn_sub">Accedi</button>
-            
-
-                <div class="form-group">
-                    <label for="password">Password</label>
-                    <input type="password" id="password"  formControlName="password" >
-                    <mat-slide-toggle
+                
+                <mat-slide-toggle
                     (click)="modifica()"
                     [checked]="!checked">
-                    RICORDA LA PASSWORD
+                    Ricorda la password
                 </mat-slide-toggle>
-                </div>
-                <br><br>
-                <button type="submit" id="btnSub">Login</button>
+
+                <button type="submit" id="btn_sub">Accedi</button>
+
             </div>
         </form>
     </div>
