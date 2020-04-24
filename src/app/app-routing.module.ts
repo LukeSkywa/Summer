@@ -20,7 +20,7 @@ const routes: Routes = [
   { path: 'lista', component: ListaComponent},
   { path: 'dettaglio/:id', component: DettaglioComponent},
   { path: 'profilo', component: ProfiloComponent, canActivate: [GuardService]},
-  { path: 'registrati', component:RegistrazioneComponent, canActivate: [EditGuardService]},
+  { path: 'registrati', component:RegistrazioneComponent},
   { path: '', redirectTo: '/login', pathMatch: 'full' },
 //  { path: '**', component: PageNotFoundComponent }
 ];
