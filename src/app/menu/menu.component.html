@@ -4,5 +4,8 @@
   </li>
   
 </ul>
-<input *ngIf="ricerca" type="text">Cerca
+<ng-container *ngIf="ricerca">
+  <input type="text" #nome >Cerca
+  <button (click)="cerca(nome.value)">CERCA</button>
+</ng-container>
   
