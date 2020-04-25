@@ -4,7 +4,7 @@
     <p id="bold_info">{{user.name}} {{user.surname}}</p>
     
 
-    <div class="informations">
+    <div class="informations" [hidden]= "isShow">
         <div class="info">
             <div class="item1"><label for="name">Name</label></div>
             <div class="item2">{{user.name}}</div>
@@ -30,12 +30,13 @@
             <div class="item2">{{user.telephone}}</div>
         </div>
             
-        <button (click)="cliccato()" id="btn_edit">Modifica</button>
+        <button (click)="cliccato(); hide()" id="btn_edit">Modifica</button>
     </div>
 
     
     
     <ng-container *ngIf="daModificare">
+        <!-- la form si nasconde anche senza inserire [hidden] = "isShow_form" -->
         <form [formGroup]="profiloForm" (ngSubmit)="onSubmit(profiloForm.value)">
             <div class="form-group">
                 <div class=item1_edit>
@@ -89,10 +90,10 @@
             </div>
             
             <div class="buttons">
-                <button type="submit" id="btn_sub">conferma</button>
-                <button id="btn_reset" >annulla</button>
+                <button type="submit" id="btn_sub" (click)="hide_form()">conferma</button>
+                <button type="button" id="btn_reset" (click)="hide_form()">annulla</button>
             </div>
-            
         </form>
     </ng-container>
+    
 </div>
