@@ -1,53 +1,56 @@
 
 <div class="back">
     <div class="div_login">
-        <img src="logo.jpg" alt="logo">
-        <button type="button" id="btn_singup" routerLinkActive="active" routerLink="/registrati">+</button>
+        <img src="assets/img/logo.png.PNG" alt="logo" id="logo">
+        <button type="button" id="btn_singup" routerLinkActive="active" routerLink="/registrati">
+            <span class="material-icons">add</span>
+        </button>
         <p>Accedi</p>
         
         <form [formGroup]="loginForm" (ngSubmit)="login();">
-            <div class="grid_div">
-                <div class="form-group">
-                    <label for="username" id="lbl">Nome utente
-                        <div class="fist_section">
-                                <span class="material-icons">
-                                    person 
-                                </span>
-                                <input type="text" id="username" formControlName="username" placeholder="Mario.Rossi">
-                                <p *ngIf="usernameControl.status === 'INVALID' && usernameControl.dirty" id="error">Campo nome obbligatorio</p>
-                        </div>
-                    </label>
+            <div class="form-group">
+                <div class="item1">
+                    <span class="material-icons">
+                        person                        
+                    </span>
                 </div>
-
-                <div class="form-group">
-                    <div class="second_section">
-                            <label for="password" id="lbl">Password
-                                <span class="material-icons" id="span_left">
-                                enhanced_encryption
-                                </span>
-                                <input [type]="passwordType" id="password" formControlName="password" placeholder="qwerty">
-                                <span class="material-icons" (click)="togglePassword()" id="span_right">
-                                    visibility_off
-                                </span>
-                            </label>
-                    </div>
+                
+                <div class="item2">
+                    <label for="username" id="lbl">Nome utente</label>
                 </div>
-
-                <button type="submit" id="btn_sub">Accedi</button>
-            
-
-                <div class="form-group">
-                    <label for="password">Password</label>
-                    <input type="password" id="password"  formControlName="password" >
-                    <mat-slide-toggle
-                    (click)="modifica()"
-                    [checked]="!checked">
-                    RICORDA LA PASSWORD
-                </mat-slide-toggle>
+                <div class="item3">
+                    <input type="text" id="username" formControlName="username" placeholder="insert username">
                 </div>
-                <br><br>
-                <button type="submit" id="btnSub">Login</button>
-            </div>
+            </div>  
+
+
+            <div class="form-group">
+                <div class=item1>
+                    <span class="material-icons" id="span_left">
+                        enhanced_encryption
+                    </span>
+                </div>
+                <div class="item2">
+                    <label for="password" id="lbl">Password</label>
+                </div>
+                <div class="item3">
+                    <input [type]="passwordType" id="password" formControlName="password" placeholder="insert password">
+                </div>
+                <div class="item4">
+                    <span class="material-icons" (click)="togglePassword()" id="span_right">
+                        visibility
+                    </span>
+                </div>        
+            </div> 
+
+            <mat-slide-toggle
+                id="ricorda"
+                (click)="modifica()"
+                [checked]="!checked">
+                   Memorizza password
+            </mat-slide-toggle>
+
+            <button type="submit" id="btn_sub">Accedi</button>            
         </form>
     </div>
 </div>

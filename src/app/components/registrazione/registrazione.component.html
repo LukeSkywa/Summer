@@ -1,28 +1,47 @@
 
 <div class="back">
     <div class="div_singup">
-        <img src="logo.jpg" alt="logo">
-        <button type="button" id="btn_login" routerLinkActive="active" routerLink="/login">✕</button>
+        <img src="assets/img/logo.png.PNG" alt="logo" id="logo">
+        <button type="button" id="btn_login" routerLinkActive="active" routerLink="/login">
+            <span class="material-icons">clear</span>
+        </button>
         <p>Registrati</p>
         <form [formGroup]="registrazioneForm" (ngSubmit)="registrazione();" >
-        <div class="form-group">
-            <label for="username" id="lbl">Nome utente</label><br>
-            <span class="material-icons">
-                person 
-                </span>
-            <input type="text" id="username" formControlName="username" >
-        </div>
-        <div class="form-group">
-            <span class="material-icons">
-                enhanced_encryption
-            </span>
-            <label for="password" id="lbl">Password</label><br>
-            <input [type]="passwordType" id="password"  formControlName="password" >
-            <span class="material-icons" (click)="togglePassword()">
-                visibility_off
-                </span>
-        </div>
-        <button type="submit" id="btn_sub">Registrati</button>
-    </form>
+                <div class="form-group">
+                    <div class="item1">
+                        <span class="material-icons">
+                            person                        
+                        </span>
+                    </div>
+                    
+                    <div class="item2">
+                        <label for="username" id="lbl">Nome utente</label>
+                    </div>
+                    <div class="item3">
+                        <input type="text" id="username" formControlName="username" placeholder="insert username">
+                    </div>
+                </div>  
+    
+    
+                <div class="form-group">
+                    <div class=item1>
+                        <span class="material-icons" id="span_left">
+                            enhanced_encryption
+                        </span>
+                    </div>
+                    <div class="item2">
+                        <label for="password" id="lbl">Password</label>
+                    </div>
+                    <div class="item3">
+                        <input [type]="passwordType" id="password" formControlName="password" placeholder="insert password">
+                    </div>
+                    <div class="item4">
+                        <span class="material-icons" (click)="togglePassword()" id="span_right">
+                            visibility
+                        </span>
+                    </div>        
+                </div>
+            <button type="submit" id="btn_sub">Registrati</button>
+        </form>
     </div>
 </div>

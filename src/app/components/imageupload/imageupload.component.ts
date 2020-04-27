@@ -9,7 +9,7 @@ class ImageSnippet {
 }
 
 @Component({
-  selector: 'bwm-image-upload',
+  selector: 'image',
   templateUrl: './imageupload.component.html',
   styleUrls: ['./imageupload.component.scss']
 })

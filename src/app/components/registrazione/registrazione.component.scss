@@ -10,7 +10,8 @@
 }
 
 .back{
-    background-color:rgba(45, 49, 51, 0.507);
+    background-color:rgb(2,0,38);
+    background: linear-gradient(90deg, rgba(0, 39, 55, 0.5)  0%, rgba(56, 117, 163, 0.5) 100%);;
     margin: 0 auto;
     display: table;
     border-radius: 15px;
@@ -18,38 +19,114 @@
     padding-left: 10px;
 }
 
+.form-group{
+    margin: 0 auto;
+    background-color:rgb(2,0,38);
+    background: linear-gradient(90deg, rgba(0, 39, 55, 1)  0%, rgb(56, 117, 163) 100%);;
+    width: 90%;
+    display: grid;
+    grid-template-columns: 10% 70% 10% 10% ;
+    grid-template-rows: 50% 50%;
+    grid-column-gap: 7px;
+    border-bottom: 1px white solid;
+    padding-bottom: 7px;
+    margin-bottom: 10px;
+}
+
+.form-group input{
+    background-color:transparent;
+    border: 0;
+    color: white;
+    font-size: 15px;
+    
+}
+
+.item1{
+    padding-top: 10px;
+    margin-top: 10px;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+span{
+    font-size: 30px;
+}
+
+.item2{
+    margin-top: 15px;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    text-align: left;
+    padding-left: 5px;
+}
+
+.item3{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 2;
+    padding-left: 5px;
+}
+
+.item4{
+    padding-top: 10px;
+    margin-top: 10px;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+#logo{
+    width: 140px;
+    height: 110px;
+    padding-top: 5px;
+}
+
 #lbl{
     font-size: 12px;
 }
 
-span{
-    color: white; 
-}
 
-p {
-    font-size: 20px;
+
+p{
+    font-size: 25px;
+    font-weight: lighter;
 }
 
 #btn_login{
-    background-color: rgb(0, 29, 41);
+    background-color: rgb(63, 127, 176);
     position: absolute;
     margin-top: 20px;
-    margin-left: 60px;
-    width: 50px;
-    height: 50px;
+    margin-left: 36px;
+    width: 60px;
+    height: 60px;
     border: none;
     color: white;
-    border-radius: 50%;
-    font-size: 20px;
+    border-radius: 60px;
+    font-size: 30px;
+    text-align: center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #btn_sub{
     width: 80%;
-    margin-top: 40px;
+    margin-top: 59px;
     margin-bottom: 10px;
     display: inline-block;
-    border-radius: 10px;
+    border-radius: 25px;
     border: none;
     height: 30px;
     font-size: 15px;
+    font-weight: lighter;
+}
+
+#btn_sub:hover{
+    cursor: pointer;
 }
