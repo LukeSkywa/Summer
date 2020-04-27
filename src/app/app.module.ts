@@ -19,6 +19,10 @@ import { CardsComponent } from './components/cards/cards.component';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import { MyHttpService } from './services/myhttp.service';
 import { ImageUploadComponent } from './components/imageupload/imageupload.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
+
+
 
 
 
@@ -46,7 +50,10 @@ import { ImageUploadComponent } from './components/imageupload/imageupload.compo
     FormsModule,
     BrowserAnimationsModule,
     MatCardModule,
-    MatSlideToggleModule
+    MatSlideToggleModule,
+    NgbModule,
+    
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

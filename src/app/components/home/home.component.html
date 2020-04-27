@@ -21,7 +21,29 @@
         <img src="assets/img/collage.png" alt="none" class="collage">
     <button (click)="temaChiaro()">TEMA CHIARO</button>
     <button (click)="temaScuro()">TEMA SCURO</button>
-        
+    <!--prova carosello-->
+    <ngb-carousel>
+        <ng-template ngbSlide>
+          <div class="picsum-img-wrapper">
+            <img src="./assets/img/logo.png.png" alt="Angular Carousel 1">
+          </div>
+          <div class="carousel-caption">
+            <h3>Title Goes Here</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </div>
+        </ng-template>
+        <ng-template ngbSlide>
+          <div class="picsum-img-wrapper">
+            <img src="assets/img-02.jpeg" alt="Angular Carousel 2">
+          </div>
+          <div class="carousel-caption">
+            <h3>Title Goes Here</h3>
+            <p>Consectetur tortor volutpat pretium.</p>
+          </div>
+        </ng-template>
+      </ngb-carousel>
+
+    
  </div>
 
 
