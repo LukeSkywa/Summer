@@ -42,6 +42,7 @@ export class ProfiloComponent implements OnInit {
     this.isShow_form = !this.isShow_form;
     //rendo di nuovo visibile il div
     this.isShow = false;
+    this.daModificare=false;
   }
 
   undo(){
