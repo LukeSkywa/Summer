@@ -6,10 +6,10 @@ import { LoginComponent } from './components/login/login.component';
 import { RegistrazioneComponent } from './components/registrazione/registrazione.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HomeComponent } from './components/home/home.component';
-import { MenuComponent } from './menu/menu.component';
+import { MenuComponent } from './components/menu/menu.component';
 import { ProfiloComponent } from './components/profilo/profilo.component';
 import { HttpClientModule } from '@angular/common/http';
-import { ListaComponent } from './lista/lista/lista.component';
+import { ListaComponent } from './components/lista/lista.component';
 import { HighlightDirective } from './directives/highlight-directive.service';
 import { DettaglioComponent } from './components/dettaglio/dettaglio.component';
 import { FeedbackComponent } from './components/feedback/feedback.component';
@@ -19,6 +19,10 @@ import { CardsComponent } from './components/cards/cards.component';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import { MyHttpService } from './services/myhttp.service';
 import { ImageUploadComponent } from './components/imageupload/imageupload.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
+
+
 
 
 
@@ -46,7 +50,10 @@ import { ImageUploadComponent } from './components/imageupload/imageupload.compo
     FormsModule,
     BrowserAnimationsModule,
     MatCardModule,
-    MatSlideToggleModule
+    MatSlideToggleModule,
+    NgbModule,
+    
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

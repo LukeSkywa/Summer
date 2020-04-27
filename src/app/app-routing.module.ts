@@ -5,7 +5,7 @@ import { EditGuardService } from './services/guards/edit-guard.service';
 import { GuardService } from './services/guards/guard.service';
 import { RegistrazioneComponent } from './components/registrazione/registrazione.component';
 import { HomeComponent } from './components/home/home.component';
-import { ListaComponent } from './lista/lista/lista.component';
+import { ListaComponent } from './components/lista/lista.component';
 import { ProfiloComponent } from './components/profilo/profilo.component';
 import { DettaglioComponent } from './components/dettaglio/dettaglio.component';
 import { FeedbackComponent } from './components/feedback/feedback.component';
