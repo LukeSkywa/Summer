@@ -20,6 +20,7 @@ import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import { MyHttpService } from './services/myhttp.service';
 import { ImageUploadComponent } from './components/imageupload/imageupload.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { BetaPlayCanzoneComponent } from './components/beta-play-canzone/beta-play-canzone.component';
 
 
 
@@ -40,7 +41,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     DettaglioComponent,
     FeedbackComponent,
     CardsComponent,
-    ImageUploadComponent
+    ImageUploadComponent,
+    BetaPlayCanzoneComponent
   ],
   imports: [
     BrowserModule,

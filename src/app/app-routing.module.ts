@@ -11,6 +11,7 @@ import { DettaglioComponent } from './components/dettaglio/dettaglio.component';
 import { FeedbackComponent } from './components/feedback/feedback.component';
 import { CardsComponent } from './components/cards/cards.component';
 import { ImageUploadComponent } from './components/imageupload/imageupload.component';
+import { BetaPlayCanzoneComponent } from './components/beta-play-canzone/beta-play-canzone.component';
 
 //questi sono i routes base man mano che create le cose e vi servono scommentate queste qua sotto e modificatele a piacimento
 const routes: Routes = [
@@ -21,6 +22,7 @@ const routes: Routes = [
     { path: 'feedback', component: FeedbackComponent},
     { path: 'lista', component: ListaComponent},
     { path: 'dettaglio/:id', component: DettaglioComponent},
+    { path: 'beta', component: BetaPlayCanzoneComponent},
     { path: 'profilo', component: ProfiloComponent, canActivate: [GuardService]},
     { path: 'registrati', component:RegistrazioneComponent, canActivate: [EditGuardService]},
     { path: '', redirectTo: '/home', pathMatch: 'full' },
