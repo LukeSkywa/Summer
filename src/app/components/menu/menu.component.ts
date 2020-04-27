@@ -1,7 +1,7 @@
 import { Component, OnInit} from '@angular/core';
 import { MenuItem } from 'src/app/models/menu-item.interface';
 import { Router, NavigationEnd } from '@angular/router';
-import { ComunicazioneService } from '../services/comunicazione.service';
+import { ComunicazioneService } from '../../services/comunicazione.service';
 
 
 @Component({
