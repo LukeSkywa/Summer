@@ -23,8 +23,8 @@ const routes: Routes = [
     { path: 'dettaglio/:id', component: DettaglioComponent},
     { path: 'profilo', component: ProfiloComponent, canActivate: [GuardService]},
     { path: 'registrati', component:RegistrazioneComponent, canActivate: [EditGuardService]},
-    { path: '', redirectTo: '/login', pathMatch: 'full' },
- //  { path: '**', component: PageNotFoundComponent }
+    { path: '', redirectTo: '/home', pathMatch: 'full' },
+    { path: '**', redirectTo: '/home', pathMatch: 'full' }
 ];
 
 @NgModule({
