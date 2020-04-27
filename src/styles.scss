@@ -1,8 +1,8 @@
 
 :root {
-  --rgb1: #000;
-  --rgb2: #FFF;
-  --rgb3: #FFF;
+  --rgb1: rgba(0,212,255,1);
+  --rgb2: rgba(0,212,255,1);
+  --rgb3: rgba(255,255,255,1);
 }
 
 
@@ -35,3 +35,9 @@
 }
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
