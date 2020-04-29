@@ -22,6 +22,7 @@ import { ImageUploadComponent } from './components/imageupload/imageupload.compo
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BetaPlayCanzoneComponent } from './components/beta-play-canzone/beta-play-canzone.component';
 import { CaroselloComponent } from './components/carosello/carosello.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 
 
@@ -44,7 +45,8 @@ import { CaroselloComponent } from './components/carosello/carosello.component';
     CardsComponent,
     ImageUploadComponent,
     BetaPlayCanzoneComponent,
-    CaroselloComponent
+    CaroselloComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
