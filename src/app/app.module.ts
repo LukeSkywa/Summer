@@ -21,6 +21,7 @@ import { MyHttpService } from './services/myhttp.service';
 import { ImageUploadComponent } from './components/imageupload/imageupload.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BetaPlayCanzoneComponent } from './components/beta-play-canzone/beta-play-canzone.component';
+import { CaroselloComponent } from './components/carosello/carosello.component';
 
 
 
@@ -42,7 +43,8 @@ import { BetaPlayCanzoneComponent } from './components/beta-play-canzone/beta-pl
     FeedbackComponent,
     CardsComponent,
     ImageUploadComponent,
-    BetaPlayCanzoneComponent
+    BetaPlayCanzoneComponent,
+    CaroselloComponent
   ],
   imports: [
     BrowserModule,

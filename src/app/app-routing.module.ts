@@ -15,14 +15,14 @@ import { BetaPlayCanzoneComponent } from './components/beta-play-canzone/beta-pl
 
 //questi sono i routes base man mano che create le cose e vi servono scommentate queste qua sotto e modificatele a piacimento
 const routes: Routes = [
-    { path: 'login', component: LoginComponent },
+    { path: 'login', component: LoginComponent, canActivate: [EditGuardService]},
     { path: 'home', component: HomeComponent },
-    { path: 'immagine', component: ImageUploadComponent},
-    { path: 'cards', component: CardsComponent},
-    { path: 'feedback', component: FeedbackComponent},
-    { path: 'lista', component: ListaComponent},
-    { path: 'dettaglio/:id', component: DettaglioComponent},
-    { path: 'beta', component: BetaPlayCanzoneComponent},
+    { path: 'immagine', component: ImageUploadComponent, canActivate: [GuardService]},
+    { path: 'cards', component: CardsComponent, canActivate: [GuardService]},
+    { path: 'feedback', component: FeedbackComponent, canActivate: [GuardService]},
+    { path: 'lista', component: ListaComponent, canActivate: [GuardService]},
+    { path: 'dettaglio/:id', component: DettaglioComponent, canActivate: [GuardService]},
+    { path: 'beta', component: BetaPlayCanzoneComponent, canActivate: [GuardService]},
     { path: 'profilo', component: ProfiloComponent, canActivate: [GuardService]},
     { path: 'registrati', component:RegistrazioneComponent, canActivate: [EditGuardService]},
     { path: '', redirectTo: '/home', pathMatch: 'full' },

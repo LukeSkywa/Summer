@@ -12,7 +12,7 @@
             Marco Bertelli,
         </li>
         <li>
-            Luis Guiniot,
+            Louis Guiniot,
         </li>
         <li>
             Thomas Rossi &
@@ -22,35 +22,19 @@
         </li>
     </ul>  
         <img src="assets/img/collage.PNG" alt="none" class="collage">
-        <button (click)="temaChiaro()">TEMA CHIARO</button>
-        <button (click)="temaScuro()">TEMA SCURO</button>
-        <p><ngb-progressbar type="primary" [value]="75"> STATO SVILUPPO </ngb-progressbar></p>
-    <!--prova carosello-->
-    <ngb-carousel>
-        <ng-template ngbSlide>
-          <div class="picsum-img-wrapper">
-            <img src="./assets/img/the box.jpg.jpg" alt="Angular Carousel 1">
-          </div>
-          <div class="carousel-caption">
-            <h3>Title Goes Here</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          </div>
-        </ng-template>
-        <ng-template ngbSlide>
-          <div class="picsum-img-wrapper">
-            <img src="assets/img-02.jpeg" alt="Angular Carousel 2">
-          </div>
-          <div class="carousel-caption">
-            <h3>Title Goes Here</h3>
-            <p>Consectetur tortor volutpat pretium.</p>
-          </div>
-        </ng-template>
-      </ngb-carousel>
+        
+
+    <app-carosello></app-carosello>
+      <p><ngb-progressbar type="primary" [value]="75"> STATO SVILUPPO </ngb-progressbar></p>
 
         <div class="footer grid-container">
             <img src="assets/img/instagram (1).png" alt="none" class="grid-item">
             <img src="assets/img/facebook (1).png" alt="none" class="grid-item">
             <img src="assets/img/twitter (1).png" alt="none" class="grid-item">
             <img src="assets/img/discord (1).png" alt="none" class="grid-item">
-          </div>
+            <div class="button">
+            <button (click)="temaChiaro()" id="btn_theme">TEMA CHIARO</button>
+            <button (click)="temaScuro()" id="btn_theme">TEMA SCURO</button>
+        </div>
+        </div>
         </div>
