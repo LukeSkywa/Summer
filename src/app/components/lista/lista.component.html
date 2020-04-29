@@ -34,24 +34,39 @@
 
 <button  (click)="filtra('nasc')">Nascosti</button>
 
-        <div  *ngFor="let item of lista" >
+        <div  *ngFor="let item of lista" class="distanziatore" >
             <ng-container *ngIf="!item.nascosto || filtroValue === 'nasc'">
                 <mat-card class="base">
                     <div class="grid-container">
-                         class="item1"><img mat-card-image src="{{item.immagine}}" alt="None">
-                         class="item2"><button mat-button><img src="assets/img/like.png" alt="None"></button>
-                         class="item3"><button mat-button><img src="assets/img/share.png" alt="None"></button>
-                        <mat-card-title>{{item.nome}}</mat-card-title>
-                        <mat-card-subtitle>{{item.autore}}</mat-card-subtitle> 
-                        <button (click)="apriD(item.id)">Dettaglio</button> 
-                        <mat-card-content>
-                            <button (click)="addPreferiti(item.id,filtroValue)">PREFERITI</button>
-                            <button  *ngIf="item.nascosto === false" (click)="nascondi(item.id,filtroValue)">NASCONDI</button>
-                            <button  *ngIf="item.nascosto === true"(click)="nascondi(item.id,filtroValue)">MOSTRA</button>
-                            <ng-container *ngIf="item.preferito === true">
-                                <span appHighlight>☆</span>
-                            </ng-container>
-                        </mat-card-content>
+                        <div class="item1">
+                            <img mat-card-image src="{{item.immagine}}" alt="None">
+                        </div>
+                        <div class="item2">
+                            <mat-card-title>{{item.nome}}</mat-card-title>
+                        </div>
+                        <div class="item3">
+                            <mat-card-subtitle>{{item.autore}}</mat-card-subtitle>
+                        </div>
+                        <div class="item4">
+                            <button (click)="addPreferiti(item.id,filtroValue)"><img src="assets/img/like.png" alt="None" ></button>
+                        </div>
+                        <div class="item5">
+                            <button mat-button><img src="assets/img/share.png" alt="None" ></button>
+                        </div>
+                        <div class="item6">
+                            <div class="dropdown">
+                                <button class="dropbtn"><img src="assets/img/puntiVert.png" alt=""></button>
+                                <div class="dropdown-content">
+                                <div *ngIf="item.nascosto === true">
+                                    <button  (click)="nascondi(item.id,filtroValue)">N</button>  nascondi
+                                </div>
+                                <div *ngIf="item.nascosto === false" >
+                                    <button  (click)="nascondi(item.id,filtroValue)">NASCONDI</button>
+                                </div>
+                                <button (click)="apriD(item.id)">Dettaglio</button> 
+                                </div>
+                              </div>
+                        </div>   
                     </div>    
                 </mat-card>
             </ng-container>
