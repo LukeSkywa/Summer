@@ -22,10 +22,8 @@
         </li>
     </ul>  
         <img src="assets/img/collage.PNG" alt="none" class="collage">
-        <br><br>
-        <button (click)="temaChiaro()" id="btn_theme">TEMA CHIARO</button>
-        <button (click)="temaScuro()" id="btn_theme">TEMA SCURO</button>
         
+
     <app-carosello></app-carosello>
       <p><ngb-progressbar type="primary" [value]="75"> STATO SVILUPPO </ngb-progressbar></p>
 
@@ -34,5 +32,9 @@
             <img src="assets/img/facebook (1).png" alt="none" class="grid-item">
             <img src="assets/img/twitter (1).png" alt="none" class="grid-item">
             <img src="assets/img/discord (1).png" alt="none" class="grid-item">
-          </div>
+            <div class="button">
+            <button (click)="temaChiaro()" id="btn_theme">TEMA CHIARO</button>
+            <button (click)="temaScuro()" id="btn_theme">TEMA SCURO</button>
+        </div>
+        </div>
         </div>
