@@ -88,9 +88,7 @@ export class ListaComponent implements OnInit {
     this.router.navigate(['/dettaglio',id]);
   }
   //barra di ricerca
-  cerca(nome){
-    
-  }
+  
   ngOnInit(): void {
     this.riempi();
   }
