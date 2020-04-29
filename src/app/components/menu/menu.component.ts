@@ -16,8 +16,8 @@ export class MenuComponent implements OnInit {
     {id: 1, description: 'Home', url:"/home"},
     {id: 2, description: 'Lista', url:"/lista"},
     {id: 3, description: 'Cards', url:"/cards"},
-    {id: 4, description: 'login', url:"/login"},
-    {id: 4, description: 'profilo', url:"/profilo"},
+    {id: 4, description: 'Login', url:"/login"},
+    {id: 4, description: 'Profilo', url:"/profilo"},
   ];
   user:string;
   ricerca=false;
