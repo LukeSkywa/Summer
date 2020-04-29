@@ -6,4 +6,7 @@
     <input type="text" #nome >
     <button (click)="cerca(nome.value)" class="bottone"><img src="assets/img/search.png" alt="none"></button>
   </ng-container>
+  <ng-container *ngIf="loggato()">
+    <button (click)="logout()">LOGOUT</button>
+  </ng-container>
 </div>
