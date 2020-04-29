@@ -1,11 +1,9 @@
-<ul>
-  <li *ngFor="let menuItem of menuList">
-    <button [routerLink]="menuItem.url" class="bottone"> {{menuItem.description}}</button>
-  </li>
-  
-</ul>
-<ng-container *ngIf="ricerca">
-  <input type="text" #nome >Cerca
-  <button (click)="cerca(nome.value)">CERCA</button>
-</ng-container>
-  
+<div class="grid-container">
+  <div *ngFor="let menuItem of menuList">
+    <button [routerLink]="menuItem.url" class="grid-item"> {{menuItem.description}}</button>
+  </div>  
+  <ng-container *ngIf="ricerca">
+    <input type="text" #nome >
+    <button (click)="cerca(nome.value)" class="bottone"><img src="assets/img/search.png" alt="none"></button>
+  </ng-container>
+</div>

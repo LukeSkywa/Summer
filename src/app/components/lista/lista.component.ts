@@ -11,7 +11,7 @@ import { ComunicazioneService } from 'src/app/services/comunicazione.service';
 })
 export class ListaComponent implements OnInit {
   lista=[];
-
+  filtroValue : string;
   constructor(private myHttpService: MyHttpService,private router: Router,private comunicazioneService: ComunicazioneService) {
     this.comunicazioneService.messaggio$.subscribe(value=>{
       this.cercaInHttp(value);
