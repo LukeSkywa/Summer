@@ -58,10 +58,10 @@
                                 <button class="dropbtn"><img src="assets/img/puntiVert.png" alt=""></button>
                                 <div class="dropdown-content">
                                 <div *ngIf="item.nascosto === true">
-                                    <button  (click)="nascondi(item.id,filtroValue)">N</button>  nascondi
+                                    <button  (click)="nascondi(item.id,filtroValue)">Mostra</button> 
                                 </div>
                                 <div *ngIf="item.nascosto === false" >
-                                    <button  (click)="nascondi(item.id,filtroValue)">NASCONDI</button>
+                                    <button  (click)="nascondi(item.id,filtroValue)">Nascondi</button>
                                 </div>
                                 <button (click)="apriD(item.id)">Dettaglio</button> 
                                 </div>

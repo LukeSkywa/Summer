@@ -19,7 +19,7 @@ export class ListaComponent implements OnInit {
    }
 
 //riempi la lista da db
-  riempi(){
+   riempi(){
     this.myHttpService.getCanzoni().subscribe(reponse => {
       this.lista = reponse;
       console.log(this.lista);
@@ -50,17 +50,11 @@ export class ListaComponent implements OnInit {
     }, err => {
      
     });
+    
   }
-  //metodo per cercare
-  cercaInHttp(id){
-    this.myHttpService.getSingolo(id).subscribe(response =>{
-      this.lista=[];
-      this.lista.push(response);
-    })
-  }
-
   //metodo che da filtra al cambio di select
   filtra(value:string){
+    this.filtroValue = value;
     if(value==="all") this.riempi();
     else this.retrieveFilter(value);
   }
@@ -87,10 +81,20 @@ export class ListaComponent implements OnInit {
   apriD(id:number){
     this.router.navigate(['/dettaglio',id]);
   }
-  //barra di ricerca
-  
   ngOnInit(): void {
     this.riempi();
   }
+
+
+  //metodo per cercare
+  cercaInHttp(id){
+    this.myHttpService.getSingolo(id).subscribe(response =>{
+      this.lista=[];
+      this.lista.push(response);
+    })
+  }
+
+  //metodo che da filtra al cambio di select
+
 
 }
