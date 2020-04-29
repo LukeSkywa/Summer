@@ -38,16 +38,16 @@
             <ng-container *ngIf="!item.nascosto || filtroValue === 'nasc'">
                 <mat-card class="base">
                     <div class="grid-container">
-                         class="item1"><img mat-card-image src="{{item.immagine}}" alt="None">
-                         class="item2"><button mat-button><img src="assets/img/like.png" alt="None"></button>
-                         class="item3"><button mat-button><img src="assets/img/share.png" alt="None"></button>
+                        <img mat-card-image src="{{item.immagine}}" alt="None">
+                        <button mat-button><img src="assets/img/like.png" alt="None"></button>
+                        <button mat-button><img src="assets/img/share.png" alt="None"></button>
                         <mat-card-title>{{item.nome}}</mat-card-title>
                         <mat-card-subtitle>{{item.autore}}</mat-card-subtitle> 
                         <button (click)="apriD(item.id)">Dettaglio</button> 
                         <mat-card-content>
                             <button (click)="addPreferiti(item.id,filtroValue)">PREFERITI</button>
-                            <button  *ngIf="item.nascosto === false" (click)="nascondi(item.id,filtroValue)">NASCONDI</button>
-                            <button  *ngIf="item.nascosto === true"(click)="nascondi(item.id,filtroValue)">MOSTRA</button>
+                            <button  *ngIf="item.nascosto === false" (click)="nascondi(item.id,filtroValue)">Nascondi</button>
+                            <button  *ngIf="item.nascosto === true"(click)="nascondi(item.id,filtroValue)">Mostra</button>
                             <ng-container *ngIf="item.preferito === true">
                                 <span appHighlight>☆</span>
                             </ng-container>
