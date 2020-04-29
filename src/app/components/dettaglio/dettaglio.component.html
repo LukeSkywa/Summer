@@ -1,5 +1,15 @@
 
-<p><img src="{{item.immagine}}" alt="none"></p>
-<p>{{item.nome}}</p>
-<p>{{item.genere}}</p>
-<p>{{item.autore}}</p>
+<div class="grid-container">
+    <img src="{{item.immagine}}" alt="none" class="item1">
+    <div class="item3">
+        <h1>Titolo: {{item.nome}}</h1>
+        <h3>Genere: {{item.genere}}</h3>
+        <h2>Autore: {{item.autore}}</h2>
+    </div>
+    <div class="item2">
+        <h5>costo : 0.{{item.prezzo}}0 €</h5>
+    </div>
+    <div>
+        <h5>Rate : 0.{{item.rating}}0 €</h5>
+    </div>
+</div>
