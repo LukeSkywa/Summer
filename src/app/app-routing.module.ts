@@ -4,7 +4,7 @@ import { LoginComponent } from './components/login/login.component';
 import { EditGuardService } from './services/guards/edit-guard.service';
 import { GuardService } from './services/guards/guard.service';
 import { RegistrazioneComponent } from './components/registrazione/registrazione.component';
-import { HomeComponent } from './components/home/home.component';
+
 import { ListaComponent } from './components/lista/lista.component';
 import { ProfiloComponent } from './components/profilo/profilo.component';
 import { DettaglioComponent } from './components/dettaglio/dettaglio.component';
@@ -16,7 +16,7 @@ import { BetaPlayCanzoneComponent } from './components/beta-play-canzone/beta-pl
 //questi sono i routes base man mano che create le cose e vi servono scommentate queste qua sotto e modificatele a piacimento
 const routes: Routes = [
     { path: 'login', component: LoginComponent, canActivate: [EditGuardService]},
-    { path: 'home', component: HomeComponent },
+    { path: 'home', loadChildren: () => import('./features/home/home.module').then(m => m.HomeModule) },
     { path: 'immagine', component: ImageUploadComponent, canActivate: [GuardService]},
     { path: 'cards', component: CardsComponent, canActivate: [GuardService]},
     { path: 'feedback', component: FeedbackComponent, canActivate: [GuardService]},
