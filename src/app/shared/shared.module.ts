@@ -4,6 +4,7 @@ import { FooterComponent } from '../components/footer/footer.component';
 import { MatCardModule } from '@angular/material/card';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -13,7 +14,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     CommonModule,
     MatCardModule,
     MatSlideToggleModule,
-    NgbModule
+    NgbModule,
+    ReactiveFormsModule
   ],
   exports:[
     CommonModule,
@@ -21,6 +23,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     MatCardModule,
     MatSlideToggleModule,
     NgbModule,
+    ReactiveFormsModule
 
   ]
 })
