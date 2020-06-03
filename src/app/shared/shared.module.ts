@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FooterComponent } from '../components/footer/footer.component';
+import { FooterComponent } from './components/footer/footer.component';
 import { MatCardModule } from '@angular/material/card';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -11,7 +11,7 @@ import { MenuComponent } from './components/menu/menu.component';
 
 
 @NgModule({
-  declarations: [FooterComponent,MenuComponent],
+  declarations: [FooterComponent,MenuComponent,FooterComponent],
   imports: [
     CommonModule,
     MatCardModule,
@@ -28,7 +28,8 @@ import { MenuComponent } from './components/menu/menu.component';
     MatSlideToggleModule,
     NgbModule,
     ReactiveFormsModule,
-    MenuComponent
+    MenuComponent,
+    FooterComponent
 
   ]
 })
