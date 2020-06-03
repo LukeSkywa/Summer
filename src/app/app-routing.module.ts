@@ -14,7 +14,7 @@ import { BetaPlayCanzoneComponent } from './components/beta-play-canzone/beta-pl
 
 //questi sono i routes base man mano che create le cose e vi servono scommentate queste qua sotto e modificatele a piacimento
 const routes: Routes = [
-  
+
     { path: 'home', loadChildren: () => import('./features/home/home.module').then(m => m.HomeModule) },
     { path: 'immagine', component: ImageUploadComponent, canActivate: [GuardService]},
     { path: 'cards', component: CardsComponent, canActivate: [GuardService]},

@@ -1,8 +1,9 @@
 import { Component, OnInit} from '@angular/core';
 import { MenuItem } from 'src/app/models/menu-item.interface';
 import { Router, NavigationEnd } from '@angular/router';
-import { ComunicazioneService } from '../../services/comunicazione.service';
+import { ComunicazioneService } from '../../../services/comunicazione.service';
 import { LoginService } from 'src/app/services/login/login.service';
+import { RouterService } from 'src/app/services/router.service';
 
 
 @Component({
@@ -23,7 +24,7 @@ export class MenuComponent implements OnInit {
   user:string;
   ricerca=false;
    
-  constructor(router:Router,private comunicazioneService: ComunicazioneService,private loginService : LoginService) {​
+  constructor(private router:Router,private comunicazioneService: ComunicazioneService,private loginService : LoginService,private routerS:RouterService) {​
 
     router.events.subscribe(event => {​
   
@@ -52,6 +53,9 @@ export class MenuComponent implements OnInit {
   }
   logout(){
     this.loginService.eseguiLogout();
+  }
+  navigate(url:string){
+    this.routerS.navigateTo(url);
   }
 
 }

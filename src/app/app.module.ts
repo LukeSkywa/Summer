@@ -4,7 +4,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RegistrazioneComponent } from './components/registrazione/registrazione.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
-import { MenuComponent } from './components/menu/menu.component';
 import { ProfiloComponent } from './components/profilo/profilo.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ListaComponent } from './components/lista/lista.component';
@@ -28,7 +27,6 @@ import { SharedModule } from './shared/shared.module';
   declarations: [
     AppComponent,
     RegistrazioneComponent,
-    MenuComponent,
     ProfiloComponent,
     ListaComponent,
     HighlightDirective,

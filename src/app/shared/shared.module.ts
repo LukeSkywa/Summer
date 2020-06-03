@@ -5,17 +5,21 @@ import { MatCardModule } from '@angular/material/card';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ReactiveFormsModule } from '@angular/forms';
+import { MenuComponent } from './components/menu/menu.component';
+import { AppRoutingModule } from '../app-routing.module';
 
 
 
 @NgModule({
-  declarations: [FooterComponent],
+  declarations: [FooterComponent,MenuComponent],
   imports: [
     CommonModule,
     MatCardModule,
     MatSlideToggleModule,
     NgbModule,
     ReactiveFormsModule
+    
+    
   ],
   exports:[
     CommonModule,
@@ -23,7 +27,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatCardModule,
     MatSlideToggleModule,
     NgbModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MenuComponent
 
   ]
 })
