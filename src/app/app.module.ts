@@ -11,7 +11,6 @@ import { HighlightDirective } from './directives/highlight-directive.service';
 import { DettaglioComponent } from './components/dettaglio/dettaglio.component';
 import { FeedbackComponent } from './components/feedback/feedback.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import { CardsComponent } from './components/cards/cards.component';
 import { ImageUploadComponent } from './components/imageupload/imageupload.component';
 import { BetaPlayCanzoneComponent } from './components/beta-play-canzone/beta-play-canzone.component';
 import { SharedModule } from './shared/shared.module';
@@ -32,7 +31,6 @@ import { SharedModule } from './shared/shared.module';
     HighlightDirective,
     DettaglioComponent,
     FeedbackComponent,
-    CardsComponent,
     ImageUploadComponent,
     BetaPlayCanzoneComponent,
   ],

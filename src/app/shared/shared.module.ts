@@ -6,7 +6,7 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MenuComponent } from './components/menu/menu.component';
-import { AppRoutingModule } from '../app-routing.module';
+
 
 
 
