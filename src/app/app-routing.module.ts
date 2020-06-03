@@ -23,6 +23,8 @@ const routes: Routes = [
 
     { path: 'feedback', loadChildren: () => import('./features/feedback/feedback.module').then(m => m.FeedbackModule) },
     { path: 'registrazione', loadChildren: () => import('./features/registrazione/registrazione.module').then(m => m.RegistrazioneModule) },
+
+    { path: 'profilo', loadChildren: () => import('./features/profilo/profilo.module').then(m => m.ProfiloModule) },
     { path: '**', redirectTo: '/home', pathMatch: 'full' }
 ];
 

@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
-import { ProfiloComponent } from './components/profilo/profilo.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ListaComponent } from './components/lista/lista.component';
 import { HighlightDirective } from './directives/highlight-directive.service';
@@ -23,7 +22,6 @@ import { SharedModule } from './shared/shared.module';
 @NgModule({
   declarations: [
     AppComponent,
-    ProfiloComponent,
     ListaComponent,
     HighlightDirective,
     DettaglioComponent,
