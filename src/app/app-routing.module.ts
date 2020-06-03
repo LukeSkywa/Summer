@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { EditGuardService } from './services/guards/edit-guard.service';
 import { GuardService } from './services/guards/guard.service';
 import { ListaComponent } from './components/lista/lista.component';
-import { ProfiloComponent } from './components/profilo/profilo.component';
+
 import { DettaglioComponent } from './components/dettaglio/dettaglio.component';
 import { ImageUploadComponent } from './components/imageupload/imageupload.component';
 import { BetaPlayCanzoneComponent } from './components/beta-play-canzone/beta-play-canzone.component';
@@ -16,7 +16,7 @@ const routes: Routes = [
     { path: 'lista', component: ListaComponent, canActivate: [GuardService]},
     { path: 'dettaglio/:id', component: DettaglioComponent, canActivate: [GuardService]},
     { path: 'beta', component: BetaPlayCanzoneComponent, canActivate: [GuardService]},
-    { path: 'profilo', component: ProfiloComponent, canActivate: [GuardService]},
+
     { path: '', redirectTo: '/home', pathMatch: 'full' },
     { path: 'login', loadChildren: () => import('./features/login/login.module').then(m => m.LoginModule) },
     { path: 'cards', loadChildren: () => import('./features/cards/cards.module').then(m => m.CardsModule) },
