@@ -5,7 +5,7 @@ import { GuardService } from './services/guards/guard.service';
 import { ListaComponent } from './components/lista/lista.component';
 
 import { DettaglioComponent } from './components/dettaglio/dettaglio.component';
-import { ImageUploadComponent } from './components/imageupload/imageupload.component';
+import { ImageUploadComponent } from './shared/components/imageupload/imageupload.component';
 import { BetaPlayCanzoneComponent } from './components/beta-play-canzone/beta-play-canzone.component';
 
 //questi sono i routes base man mano che create le cose e vi servono scommentate queste qua sotto e modificatele a piacimento

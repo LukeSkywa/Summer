@@ -8,7 +8,7 @@ import { ListaComponent } from './components/lista/lista.component';
 import { HighlightDirective } from './directives/highlight-directive.service';
 import { DettaglioComponent } from './components/dettaglio/dettaglio.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import { ImageUploadComponent } from './components/imageupload/imageupload.component';
+
 import { BetaPlayCanzoneComponent } from './components/beta-play-canzone/beta-play-canzone.component';
 import { SharedModule } from './shared/shared.module';
 
@@ -25,7 +25,6 @@ import { SharedModule } from './shared/shared.module';
     ListaComponent,
     HighlightDirective,
     DettaglioComponent,
-    ImageUploadComponent,
     BetaPlayCanzoneComponent,
   ],
   imports: [
