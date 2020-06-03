@@ -7,7 +7,6 @@ import { RegistrazioneComponent } from './components/registrazione/registrazione
 import { ListaComponent } from './components/lista/lista.component';
 import { ProfiloComponent } from './components/profilo/profilo.component';
 import { DettaglioComponent } from './components/dettaglio/dettaglio.component';
-import { FeedbackComponent } from './components/feedback/feedback.component';
 import { ImageUploadComponent } from './components/imageupload/imageupload.component';
 import { BetaPlayCanzoneComponent } from './components/beta-play-canzone/beta-play-canzone.component';
 
@@ -16,7 +15,6 @@ const routes: Routes = [
 
     { path: 'home', loadChildren: () => import('./features/home/home.module').then(m => m.HomeModule) },
     { path: 'immagine', component: ImageUploadComponent, canActivate: [GuardService]},
-    { path: 'feedback', component: FeedbackComponent, canActivate: [GuardService]},
     { path: 'lista', component: ListaComponent, canActivate: [GuardService]},
     { path: 'dettaglio/:id', component: DettaglioComponent, canActivate: [GuardService]},
     { path: 'beta', component: BetaPlayCanzoneComponent, canActivate: [GuardService]},
@@ -25,6 +23,8 @@ const routes: Routes = [
     { path: '', redirectTo: '/home', pathMatch: 'full' },
     { path: 'login', loadChildren: () => import('./features/login/login.module').then(m => m.LoginModule) },
     { path: 'cards', loadChildren: () => import('./features/cards/cards.module').then(m => m.CardsModule) },
+
+    { path: 'feedback', loadChildren: () => import('./features/feedback/feedback.module').then(m => m.FeedbackModule) },
     { path: '**', redirectTo: '/home', pathMatch: 'full' }
 ];
 
