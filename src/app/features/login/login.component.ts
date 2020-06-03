@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators, FormControl} from '@angular/forms';
 import { LoginService } from 'src/app/services/login/login.service';
+import { RouterService } from 'src/app/services/router.service';
 
 @Component({
   selector: 'app-login',
@@ -17,7 +18,7 @@ export class LoginComponent implements OnInit {
   
 
 
-  constructor(private fb : FormBuilder, private loginService : LoginService) {
+  constructor(private fb : FormBuilder, private loginService : LoginService,private routerS:RouterService) {
     this.loginForm=this.fb.group({
       username : ["", Validators.required],
       password : ["", Validators.compose([Validators.required, Validators.minLength(7)])]
@@ -81,6 +82,9 @@ export class LoginComponent implements OnInit {
   //da mettere in home
   logout(){
     this.loginService.eseguiLogout();
+  }
+  navigate(url:string){
+    this.routerS.navigateTo(url);
   }
 
 }

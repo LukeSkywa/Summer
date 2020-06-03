@@ -2,8 +2,6 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { EditGuardService } from './services/guards/edit-guard.service';
 import { GuardService } from './services/guards/guard.service';
-import { RegistrazioneComponent } from './components/registrazione/registrazione.component';
-
 import { ListaComponent } from './components/lista/lista.component';
 import { ProfiloComponent } from './components/profilo/profilo.component';
 import { DettaglioComponent } from './components/dettaglio/dettaglio.component';
@@ -19,12 +17,12 @@ const routes: Routes = [
     { path: 'dettaglio/:id', component: DettaglioComponent, canActivate: [GuardService]},
     { path: 'beta', component: BetaPlayCanzoneComponent, canActivate: [GuardService]},
     { path: 'profilo', component: ProfiloComponent, canActivate: [GuardService]},
-    { path: 'registrati', component:RegistrazioneComponent, canActivate: [EditGuardService]},
     { path: '', redirectTo: '/home', pathMatch: 'full' },
     { path: 'login', loadChildren: () => import('./features/login/login.module').then(m => m.LoginModule) },
     { path: 'cards', loadChildren: () => import('./features/cards/cards.module').then(m => m.CardsModule) },
 
     { path: 'feedback', loadChildren: () => import('./features/feedback/feedback.module').then(m => m.FeedbackModule) },
+    { path: 'registrazione', loadChildren: () => import('./features/registrazione/registrazione.module').then(m => m.RegistrazioneModule) },
     { path: '**', redirectTo: '/home', pathMatch: 'full' }
 ];
 

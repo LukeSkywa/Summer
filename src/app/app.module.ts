@@ -2,7 +2,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { RegistrazioneComponent } from './components/registrazione/registrazione.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { ProfiloComponent } from './components/profilo/profilo.component';
 import { HttpClientModule } from '@angular/common/http';
@@ -24,7 +23,6 @@ import { SharedModule } from './shared/shared.module';
 @NgModule({
   declarations: [
     AppComponent,
-    RegistrazioneComponent,
     ProfiloComponent,
     ListaComponent,
     HighlightDirective,
