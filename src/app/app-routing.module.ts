@@ -26,6 +26,7 @@ const routes: Routes = [
     { path: 'profilo', component: ProfiloComponent, canActivate: [GuardService]},
     { path: 'registrati', component:RegistrazioneComponent, canActivate: [EditGuardService]},
     { path: '', redirectTo: '/home', pathMatch: 'full' },
+    { path: 'login', loadChildren: () => import('./features/login/login.module').then(m => m.LoginModule) },
     { path: '**', redirectTo: '/home', pathMatch: 'full' }
 ];
 
